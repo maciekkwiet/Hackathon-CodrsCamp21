@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "prettier --write",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "(cd server && yarn i --dev) & (cd client && yarn i --dev)",
+    "install": "(cd server && yarn) & (cd client && yarn)",
     "heroku-postbuild": "cd client && yarn run build",
     "start": "cd server && yarn run start:prod"
   },
