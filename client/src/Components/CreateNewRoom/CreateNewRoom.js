@@ -14,10 +14,10 @@ export const CreateNewRoom = () => {
     setIsLoading(true);
     try {
       console.log("1")
-      const currentRoom = await axios.post('http://localhost:4000/api/session');
+      const currentRoom = await axios.post('/api/session');
       console.log("GGGG",currentRoom)
       setIsLoading(false);
-      history.push(`/room/${currentRoom.data.room.id}/join`, { isAdmin: true });
+     history.push(`/room/${currentRoom.data.id}/join`, { isAdmin: true });
     } catch (e) {
       console.error(e);
       setIsException(true);
