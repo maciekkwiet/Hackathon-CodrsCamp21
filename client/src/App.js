@@ -1,13 +1,8 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
-import { DailyPage } from '../src/Pages/Daily';
+import { AppRoutes } from './routing/AppRoutes';
 
-const ButtonExampleButton = () => {
-  return (
-    <>
-      <Button>Click Here</Button>
-      <DailyPage></DailyPage>
-    </>
-  );
-};
-export default ButtonExampleButton;
+function App() {
+  return <AppRoutes />;
+}
+
+export default App;

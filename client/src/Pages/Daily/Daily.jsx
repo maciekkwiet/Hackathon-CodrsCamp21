@@ -1,6 +1,6 @@
 import Board from 'react-trello';
 
-import { Container } from '../Pages/DailyStyles';
+import { Container } from './DailyStyles';
 
 const data = {
   lanes: [
