@@ -3,7 +3,9 @@ import {JoinToSessoin} from './JoinToSession/JoinToSession'
 import {AddName} from './AddName/AddName'
 
 
-import { Home } from './Home/Home';
+
+import { DailyPage } from './Daily/Daily';
+import { BeerPage } from '../Pages/Beer/Beer';
 
 export const AppRoutes = () => {
   return (
@@ -14,7 +16,7 @@ export const AppRoutes = () => {
           <AddName />
         </Route>
         <Route path="/room/:roomId">
-          <Home />
+          {/* <Home /> */}
         </Route>
         <Route path="/">
           <JoinToSessoin />
@@ -25,4 +27,3 @@ export const AppRoutes = () => {
  
   );
 };
-
