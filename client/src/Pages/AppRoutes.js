@@ -1,19 +1,24 @@
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
-import {JoinToSessoin} from './JoinToSession/JoinToSession'
+import { JoinToSessoin } from './JoinToSession/JoinToSession';
+import { AddName } from './AddName/AddName';
+import { LoginForm } from './LoginForm/Loginform';
 
-
-import { Home } from './Home/Home';
+import { DailyPage } from './Daily/Daily';
+import { BeerPage } from '../Pages/Beer/Beer';
 
 export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={'/'} exact component={JoinToSessoin} />
-        <Route path={'/daily'} exact component={Home} />
-        <Route path={'/retro '} exact component={Home} />
-        <Route path={'/beer'} exact component={Home} />
-        <Route path={'/todo'} exact component={Home} />
-        <Redirect to={'/'} />
+        <Route path="/room/:roomId/join">
+          <AddName />
+        </Route>
+        <Route path="/room/:roomId">
+          <LoginForm />
+        </Route>
+        <Route path="/">
+          <JoinToSessoin />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

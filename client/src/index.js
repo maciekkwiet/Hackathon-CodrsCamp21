@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { SocketIOProvider } from 'socketio-hooks';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <SocketIOProvider url="/">
       <App />
-    </Router>
+    </SocketIOProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

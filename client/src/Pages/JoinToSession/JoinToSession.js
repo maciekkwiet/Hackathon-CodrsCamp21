@@ -1,24 +1,20 @@
-import {CreateNewRoom} from '../../Components/CreateNewRoom/CreateNewRoom'
-import {JoinToRoom} from '../../Components/CreateNewRoom/JoinToRoom'
+import { CreateNewRoom } from '../../Components/CreateNewRoom/CreateNewRoom';
+import { JoinToRoom } from '../../Components/CreateNewRoom/JoinToRoom';
 // import { Container } from 'semantic-ui-react'
-import { Container, Header, Left,Right} from '../JoinToSession/JoinToSession.jsx';
-import { Card, Icon, Image } from 'semantic-ui-react'
-import createRoom from '../../assets/createRoom.jpg'
-import joinToRoom from '../../assets/joinToRoom.jpg'
+import { Container, Header, Left, Right } from '../JoinToSession/JoinToSession.jsx';
+import { Card, Icon, Image } from 'semantic-ui-react';
+import createRoom from '../../assets/createRoom.jpg';
+import joinToRoom from '../../assets/joinToRoom.jpg';
 
 const extra = (
   <a>
-    <Icon name='circle' color='green'/>
+    <Icon name="circle" color="green" />
     Room is Active
   </a>
-)
+);
 
-
-
-export const JoinToSessoin =()=>{
-
-
-  return(
+export const JoinToSessoin = () => {
+  return (
     <Container>
       <Header>
         <h1>Virtual Platform</h1>
@@ -29,7 +25,7 @@ export const JoinToSessoin =()=>{
           <Card.Content>
             <Card.Header>Utwórz pokój</Card.Header>
           </Card.Content>
-        </Card>       
+        </Card>
       </Left>
       <Right>
         <Card>
@@ -39,10 +35,6 @@ export const JoinToSessoin =()=>{
           </Card.Content>
         </Card>
       </Right>
-
     </Container>
-   )
-}
-
-{/* <CreateNewRoom/>
-<JoinToRoom/> */}
+  );
+};
