@@ -34,9 +34,9 @@ export const JoinToSessoin =()=>{
     description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
     extra={extra}
   />
+    <CreateNewRoom/>
+    <JoinToRoom/>  
     </Container>
    )
 }
 
-{/* <CreateNewRoom/>
-<JoinToRoom/> */}

@@ -21,7 +21,8 @@ router.get('/', async (req: Request<any, any, any, Query>, res: Response) => {
 router.post('/', async (req: Request, res: Response) => {
   try {
     const room = rooms.createRoom();
-    res.json({ room });
+    console.log('room',room)
+    res.json( room );
   } catch (ex) {
     console.error(ex);
   }

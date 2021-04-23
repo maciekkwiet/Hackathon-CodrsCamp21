@@ -13,7 +13,9 @@ export const CreateNewRoom = () => {
     setIsException(false);
     setIsLoading(true);
     try {
-      const currentRoom = await axios.post('/api/session');
+      console.log("1")
+      const currentRoom = await axios.post('http://localhost:4000/api/session');
+      console.log("GGGG",currentRoom)
       setIsLoading(false);
       history.push(`/room/${currentRoom.data.room.id}/join`, { isAdmin: true });
     } catch (e) {
@@ -25,7 +27,7 @@ export const CreateNewRoom = () => {
   return (
     <>
       <div >
-        <button content={'START SESSION'} onClick={getRoomNumber}>START SESSION</button>
+        <button content={'START SESSION'} onClick={()=>getRoomNumber()}>START SESSION</button>
         {isException && <h6>Error</h6>}
         {isLoading && <h6>loading</h6>}
       </div>
