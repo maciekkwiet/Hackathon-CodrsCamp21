@@ -1,10 +1,18 @@
 import { Bordzik } from '../../Components/Bordzik/Bordzik';
-import { Container, CallMe } from '../Daily/DailyStyles';
+import { Container, Navi, CallMe, Icons, StyledLink, StyledButton } from '../Daily/DailyStyles';
 
 export const DailyPage = () => {
   return (
     <Container>
-      <CallMe></CallMe>
+      <Navi>
+        <CallMe></CallMe>
+        <Icons>
+          <StyledLink to={'/'}>
+            <StyledButton>Back</StyledButton>
+          </StyledLink>
+          <StyledButton>List</StyledButton>
+        </Icons>
+      </Navi>
       <Bordzik></Bordzik>
     </Container>
   );
