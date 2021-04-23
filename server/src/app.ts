@@ -24,8 +24,8 @@ if (dbKey) {
 } else {
   console.log(`Enviroment variable 'DB_KEY' not set. Cannot connect to DataBase`);
 }
-app.all('/', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '');
+app.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   next();
