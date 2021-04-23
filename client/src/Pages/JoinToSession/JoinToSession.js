@@ -1,7 +1,8 @@
 import {CreateNewRoom} from '../../Components/CreateNewRoom/CreateNewRoom'
 import {JoinToRoom} from '../../Components/CreateNewRoom/JoinToRoom'
-import { Container } from 'semantic-ui-react'
-import { Card, Icon } from 'semantic-ui-react'
+// import { Container } from 'semantic-ui-react'
+import { Container, Header, Left,Right} from '../JoinToSession/JoinToSession.jsx';
+import { Card, Icon, Image } from 'semantic-ui-react'
 import createRoom from '../../assets/createRoom.jpg'
 import joinToRoom from '../../assets/joinToRoom.jpg'
 
@@ -18,22 +19,27 @@ export const JoinToSessoin =()=>{
 
 
   return(
-    <Container><h6>Virtual Platform</h6>
-    <Card
-    width={50}
-    image={createRoom}
-    header='Dołącz jako uczestnik'
-    meta='Friend'
-    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-    extra={extra}
-  />
-      <Card
-    image={joinToRoom}
-    header='Dołącz jako uczestnik'
-    meta='Friend'
-    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-    extra={extra}
-  />
+    <Container>
+      <Header>
+        <h1>Virtual Platform</h1>
+      </Header>
+      <Left>
+        <Card>
+          <Image src={createRoom} />
+          <Card.Content>
+            <Card.Header>Utwórz pokój</Card.Header>
+          </Card.Content>
+        </Card>       
+      </Left>
+      <Right>
+        <Card>
+          <Image src={joinToRoom} />
+          <Card.Content>
+            <Card.Header>Utwórz pokój</Card.Header>
+          </Card.Content>
+        </Card>
+      </Right>
+
     </Container>
    )
 }
