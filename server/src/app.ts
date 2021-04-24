@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-socketController(server);
+// socketController(server);
 
 const dbKey = process.env.DB_KEY;
 
