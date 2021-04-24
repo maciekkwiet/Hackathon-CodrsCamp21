@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Card } from '../../Components/Card/Card';
+import {Container} from './MadSadGladStyles'
 import './styles.css';
+import { Grid, Image } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 export const MadSadGlad = () => {
   const [state, setState] = useState({
@@ -103,24 +106,21 @@ export const MadSadGlad = () => {
     });
   };
 
-  // toggle() {
-  //   setState({ addClass: !state.addClass });
-  // }
-
   return (
-    <div className="App">
-      <h2>Retro Board</h2> <br />
-      <div className="btn-cntr">
-      </div>
-      <br />
-      <div className="text-center">
-        <div className={state.addClass === 1 ? 'col' : state.addClass === 2 ? 'col' : 'row'}>
+    <Grid Grid columns={3} divided style={{padding:' 0 25px 0 25px'}}>
+    
+    <Grid.Row>
+         <Grid.Column>
+        <item className={state.addClass === 1 ? 'col' : state.addClass === 2 ? 'col' : 'row'}>
           <div className={state.addClass === 1 ? 'row' : 'col'}>
             <div className={(state.addClass === 1 ? ' Rotate-1' : '').toString()}>
-              <h4>Went Well</h4>
-              <button type="button" className="addButton" onClick={() => CreateCard('Went Well', '')}>
-                +
-              </button>
+       
+              <h1 style={{marginTop:'30px'}}>Dobrze</h1>
+           
+              <Button basic style={{width:'100%', marginBottom:'20px'}} color='blue' onClick={() => CreateCard('Went Well', '')}>
+      +
+    </Button>
+    
             </div>
             {state.Cards.map((card, idx) => {
               if (card.type === 'Went Well') {
@@ -147,12 +147,18 @@ export const MadSadGlad = () => {
               }
             })}
           </div>
+          </item>
+</Grid.Column>
+<Grid.Column>
+<div>
           <div className={state.addClass === 1 ? 'row' : 'col'}>
             <div className={(state.addClass === 1 ? ' Rotate-1' : '').toString()}>
-              <h4>To Improve</h4>
-              <button type="button" className="addButton" onClick={() => CreateCard('To Improve', '')}>
-                +
-              </button>
+            <h1 style={{marginTop:'30px'}}>Do poprawy</h1>
+          
+
+<Button basic style={{width:'100%', marginBottom:'20px'}} color='blue' onClick={() => CreateCard('To Improve', '')}>
+      +
+    </Button>
             </div>
             {state.Cards.map((card, idx) => {
               if (card.type === 'To Improve') {
@@ -180,12 +186,17 @@ export const MadSadGlad = () => {
               }
             })}
           </div>
+          </div>
+          </Grid.Column>
+          <Grid.Column>
+          <div>
           <div className={state.addClass === 1 ? 'row' : 'col'}>
             <div className={(state.addClass === 1 ? ' Rotate-1' : '').toString()}>
-              <h4>Action Items</h4>
-              <button type="button" className="addButton" onClick={() => CreateCard('Action Items', '')}>
-                +
-              </button>
+            <h1 style={{marginTop:'30px'}}>Pomysły</h1>
+
+              <Button basic style={{width:'100%', marginBottom:'20px'}} color='blue' onClick={() => CreateCard('Action Items', '')}>
+      +
+    </Button>
             </div>
             {state.Cards.map((card, idx) => {
               if (card.type === 'Action Items') {
@@ -213,8 +224,10 @@ export const MadSadGlad = () => {
               }
             })}
           </div>
-        </div>
-      </div>
-    </div>
+          </div>
+          </Grid.Column>
+        
+        </Grid.Row>
+    </Grid>
   );
 };
