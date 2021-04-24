@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import { StyledBoard } from '../Bordzik/BordzikStyles';
 
@@ -34,6 +35,16 @@ export const Bordzik = () => {
       },
     ],
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios('http://localhost:4000/api/taskTable/');
+      console.log(result);
+      setData(result);
+    };
+    fetchData();
+  }, [data]);
+
   console.log(data);
   return <StyledBoard data={data} editable editLaneTitle draggable canAddLanes onDataChange={setData}></StyledBoard>;
 };

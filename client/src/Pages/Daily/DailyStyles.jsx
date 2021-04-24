@@ -28,6 +28,7 @@ export const SideContainer = styled.div`
   transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 5;
   background: #f8f32b;
+  transition: all 0.7s ease;
 `;
 
 export const Title = styled.h2`
