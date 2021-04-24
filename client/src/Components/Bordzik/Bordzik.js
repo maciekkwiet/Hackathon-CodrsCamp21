@@ -19,19 +19,23 @@ export const Bordzik = () => {
   });
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get('/api/taskTable/', { params: { roomId: sessionId } });
+    const interval = setInterval(async () => {
+      const { data } = await axios.get('http://localhost:4000/api/taskTable/', { params: { roomId: sessionId } });
+      console.log(data.data);
       setData(data.data);
-    };
-    fetchData();
+    }, 2000);
   }, []);
 
   useEffect(() => {
-    console.log(data);
-    const setDataAPI = async () => {
-      changeTable({ roomId: sessionId, data }, ({ room, token }) => {});
+    const fetchData = async () => {
+      await axios.post('http://localhost:4000/api/taskTable/', {
+        params: {
+          roomId: sessionId,
+          data: data,
+        },
+      });
     };
-    setDataAPI();
+    fetchData();
   }, [data]);
 
   useSocket('CHANGED_TABLE', newData => {
