@@ -1,24 +1,22 @@
-
-.global{
-
-bottom:'-100%'
-}
-
 /* square buttons */
 .rec.rec-arrow {
+  margin:50;
   border-radius: 0;
 }
 /* round buttons on hover */
 .rec.rec-arrow:hover {
+  margin:50;
   border-radius: 50%;
 }
 /* hide disabled buttons */
 .rec.rec-arrow:disabled {
+  margin:50;
   visibility: hidden;
 }
 /* disable default outline on focused items */
 /* add custom outline on focused items */
 .rec-carousel-item:focus {
+  margin:50;
   outline: none;
   box-shadow: inset 0 0 1px 1px lightgrey;
 }

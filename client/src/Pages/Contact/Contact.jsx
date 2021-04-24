@@ -4,7 +4,10 @@ import { useSocket } from 'socketio-hooks';
 import Carousel from 'react-elastic-carousel'
 import './Contact.css';
 import { Card } from 'semantic-ui-react'
+import styled from 'styled-components';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
+
+import './Contact.css';
 import {
   Container,
   Navi,
@@ -16,6 +19,16 @@ import {
   Person,
   Name,
 } from '../Daily/DailyStyles';
+import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
+
+
+import background from '../../assets/background.png';
+
+export const Full = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${background});
+`;
 
 const jokes = [
   {pytanie:'Jaka jest ulubiona zemsta cukiernika?' , odpowiedz:' Słodka'},
@@ -48,6 +61,7 @@ export const ContactPage = () => {
   }, []);
 
   return (
+    
     <Container>
       <Navi>
         <Icons>
@@ -59,7 +73,9 @@ export const ContactPage = () => {
           </StyledButton1>
         </Icons>
       </Navi>
-      <SideContainer show={show}>
+      <Full>
+  <div>
+  <SideContainer show={show}>
         <Title>Na spotkaniu:</Title>
         {peoples.map(person => {
           return (
@@ -69,12 +85,22 @@ export const ContactPage = () => {
           );
         })}
       </SideContainer>
-  <div>
-    <div styles={{marigin:50}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
+      <AvatarCard></AvatarCard>
+
+    <div style={{padding:'0 50px 0 50px'}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
   {jokes.map((item)=>(<div><h3>{item.pytanie}</h3> <h4>{item.odpowiedz}</h4></div> ))}
 </Carousel></div>
 
   </div>
+  </Full>
     </Container>
+   
   );
 };
+
+
+
+
+
+
+
