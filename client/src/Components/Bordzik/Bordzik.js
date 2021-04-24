@@ -20,7 +20,7 @@ export const Bordzik = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get('http://localhost:4000/api/taskTable/', { params: { roomId: sessionId } });
+      const { data } = await axios.get('/api/taskTable/', { params: { roomId: sessionId } });
       setData(data.data);
     };
     fetchData();
@@ -36,6 +36,7 @@ export const Bordzik = () => {
 
   useSocket('CHANGED_TABLE', newData => {
     console.log('newData' + newData);
+    console.log(newData);
     if (newData) setData(newData);
   });
 

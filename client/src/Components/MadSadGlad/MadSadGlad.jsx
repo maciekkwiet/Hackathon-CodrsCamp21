@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Card } from '../../Components/Card/Card';
-import { Main } from './MadSadGladStyles';
 import './styles.css';
 
 export const MadSadGlad = () => {
@@ -215,6 +214,6 @@ export const MadSadGlad = () => {
           </div>
         </div>
       </div>
-    </Main>
+    </div>
   );
 };

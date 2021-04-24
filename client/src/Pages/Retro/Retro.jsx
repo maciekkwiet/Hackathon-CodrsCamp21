@@ -11,7 +11,6 @@ export const RetroPage = () => {
 
   useEffect(() => {
     let users = JSON.parse(localStorage.getItem('users'));
-    console.log(users[0].name);
     setPeoples(users);
   }, []);
 
@@ -22,7 +21,6 @@ export const RetroPage = () => {
 
   useEffect(() => {
     let users = JSON.parse(localStorage.getItem('users'));
-    console.log(users[0].name);
     setPeoples(users);
   }, []);
 

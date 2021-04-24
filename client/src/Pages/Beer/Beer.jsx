@@ -13,7 +13,8 @@ export const BeerPage = () => {
   let history = useHistory();
 
   function handleReturn() {
-    history.push('/menu');
+    const roomId = localStorage.getItem('sessionId');
+    history.push(`/room/${roomId}`);
   }
 
   useSocket('USER_JOINED', users => {
