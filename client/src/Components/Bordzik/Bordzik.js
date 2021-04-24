@@ -7,16 +7,7 @@ import { StyledBoard } from '../Bordzik/BordzikStyles';
 export const Bordzik = () => {
   const changeTable = useEmit('CHANGE_TABLE');
   let sessionId = localStorage.getItem('sessionId');
-  const [data, setData] = useState({
-    lanes: [
-      {
-        id: 'lane1',
-        title: 'Do zrobienia',
-        label: '0/0',
-        cards: [],
-      },
-    ],
-  });
+  const [data, setData] = useState();
 
   useEffect(() => {
     const interval = setInterval(async () => {
