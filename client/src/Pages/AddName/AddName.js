@@ -27,7 +27,7 @@ export const AddName = () => {
   };
 
   useSocket('USER_JOINED', users => {
-    localStorage.setItem(users);
+    localStorage.setItem('users', JSON.stringify(users));
     history.push(`/room/${roomId}`);
   });
 
