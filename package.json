@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd server && yarn && cd ../client && yarn",
     "heroku-postbuild": "cd client && yarn build",
-    "start": "cd server && yarn start"
+    "start": "cd server && yarn start:prod"
   },
   "author": "",
   "license": "ISC",
