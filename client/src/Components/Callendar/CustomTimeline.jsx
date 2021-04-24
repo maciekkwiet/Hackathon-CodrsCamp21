@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import moment from "moment";
+import React, { Component } from 'react';
+import moment from 'moment';
 
-import Timeline from "react-calendar-timeline";
+import Timeline from 'react-calendar-timeline';
 
-import generateFakeData from "./generate-fake-data";
+import generateFakeData from './generate-fake-data';
 
 var keys = {
-  groupIdKey: "id",
-  groupTitleKey: "title",
-  groupRightTitleKey: "rightTitle",
-  itemIdKey: "id",
-  itemTitleKey: "title",
-  itemDivTitleKey: "title",
-  itemGroupKey: "group",
-  itemTimeStartKey: "start",
-  itemTimeEndKey: "end",
-  groupLabelKey: "title"
+  groupIdKey: 'id',
+  groupTitleKey: 'title',
+  groupRightTitleKey: 'rightTitle',
+  itemIdKey: 'id',
+  itemTitleKey: 'title',
+  itemDivTitleKey: 'title',
+  itemGroupKey: 'group',
+  itemTimeStartKey: 'start',
+  itemTimeEndKey: 'end',
+  groupLabelKey: 'title',
 };
 
 export default class App extends Component {
@@ -23,26 +23,21 @@ export default class App extends Component {
     super(props);
 
     const { groups, items } = generateFakeData();
-    const defaultTimeStart = moment()
-      .startOf("day")
-      .toDate();
-    const defaultTimeEnd = moment()
-      .startOf("day")
-      .add(1, "day")
-      .toDate();
+    const defaultTimeStart = moment().startOf('day').toDate();
+    const defaultTimeEnd = moment().startOf('day').add(1, 'day').toDate();
 
     this.state = {
       groups,
       items,
       defaultTimeStart,
-      defaultTimeEnd
+      defaultTimeEnd,
     };
   }
 
   itemRenderer = ({ item, timelineContext, itemContext, getItemProps, getResizeProps }) => {
     const { left: leftResizeProps, right: rightResizeProps } = getResizeProps();
-    const backgroundColor = itemContext.selected ? (itemContext.dragging ? "red" : item.selectedBgColor) : item.bgColor;
-    const borderColor = itemContext.resizing ? "red" : item.color;
+    const backgroundColor = itemContext.selected ? (itemContext.dragging ? 'red' : item.selectedBgColor) : item.bgColor;
+    const borderColor = itemContext.resizing ? 'red' : item.color;
     return (
       <div
         {...getItemProps({
@@ -50,15 +45,15 @@ export default class App extends Component {
             backgroundColor,
             color: item.color,
             borderColor,
-            borderStyle: "solid",
+            borderStyle: 'solid',
             borderWidth: 1,
             borderRadius: 4,
             borderLeftWidth: itemContext.selected ? 3 : 1,
-            borderRightWidth: itemContext.selected ? 3 : 1
+            borderRightWidth: itemContext.selected ? 3 : 1,
           },
           onMouseDown: () => {
-            console.log("on item click", item);
-          }
+            console.log('on item click', item);
+          },
         })}
       >
         {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : null}
@@ -66,10 +61,10 @@ export default class App extends Component {
         <div
           style={{
             height: itemContext.dimensions.height,
-            overflow: "hidden",
+            overflow: 'hidden',
             paddingLeft: 3,
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap"
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
           }}
         >
           {itemContext.title}
@@ -91,13 +86,13 @@ export default class App extends Component {
           ? Object.assign({}, item, {
               start: dragTime,
               end: dragTime + (item.end - item.start),
-              group: group.id
+              group: group.id,
             })
           : item
-      )
+      ),
     });
 
-    console.log("Moved", itemId, dragTime, newGroupOrder);
+    console.log('Moved', itemId, dragTime, newGroupOrder);
   };
 
   handleItemResize = (itemId, time, edge) => {
@@ -107,14 +102,14 @@ export default class App extends Component {
       items: items.map(item =>
         item.id === itemId
           ? Object.assign({}, item, {
-              start: edge === "left" ? time : item.start,
-              end: edge === "left" ? item.end : time
+              start: edge === 'left' ? time : item.start,
+              end: edge === 'left' ? item.end : time,
             })
           : item
-      )
+      ),
     });
 
-    console.log("Resized", itemId, time, edge);
+    console.log('Resized', itemId, time, edge);
   };
 
   render() {
