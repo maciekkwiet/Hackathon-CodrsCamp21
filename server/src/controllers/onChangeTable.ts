@@ -1,5 +1,4 @@
 import { rooms } from "@models/Rooms";
-
 interface TablePayload {
   roomId: string;
   data: any;
