@@ -3,10 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { useSocket } from 'socketio-hooks';
 import Carousel from 'react-elastic-carousel';
 import './Contact.css';
-import { Card } from 'semantic-ui-react';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import { Container, Navi, Icons, StyledButton, StyledButton1 } from '../Daily/DailyStyles';
-import { AvatarCard } from '../../Components/AvatarCard';
+import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
 
 const jokes = [
   { pytanie: 'Jaka jest ulubiona zemsta cukiernika?', odpowiedz: ' Słodka' },
