@@ -4,6 +4,7 @@ import { useSocket } from 'socketio-hooks';
 import Carousel from 'react-elastic-carousel'
 import './Contact.css';
 import { Card } from 'semantic-ui-react'
+import styled from 'styled-components';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import {
   Container,
@@ -12,6 +13,15 @@ import {
   StyledButton,
   StyledButton1
 } from '../Daily/DailyStyles';
+
+
+import background from '../../assets/background.png';
+
+export const Full = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${background});
+`;
 
 const jokes = [
   {pytanie:'Jaka jest ulubiona zemsta cukiernika?' , odpowiedz:' Słodka'},
@@ -44,6 +54,7 @@ export const ContactPage = () => {
   }, []);
 
   return (
+    
     <Container>
       <Navi>
         <Icons>
@@ -55,12 +66,16 @@ export const ContactPage = () => {
           </StyledButton1>
         </Icons>
       </Navi>
+      <Full>
   <div>
+
     <div styles={{marigin:50}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
   {jokes.map((item)=>(<div><h3>{item.pytanie}</h3> <h4>{item.odpowiedz}</h4></div> ))}
 </Carousel></div>
 
   </div>
+  </Full>
     </Container>
+   
   );
 };

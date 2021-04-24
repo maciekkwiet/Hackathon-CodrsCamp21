@@ -34,7 +34,8 @@ export const Menu = () => {
         </Box3>
         <Box2 onClick={() => history.push('/beer')}>
           <Container2>
-            <Title>PIWO</Title>
+            <Title>PIWO / KAWA</Title>
+       
             <Description>Natomiast tutaj...</Description>
           </Container2>
         </Box2>
