@@ -17,6 +17,7 @@ export const CreateNewRoom = () => {
       const currentRoom = await axios.post('/api/session');
       console.log('GGGG', currentRoom);
       setIsLoading(false);
+      localStorage.setItem('sessionId', currentRoom.data.id);
       history.push(`/room/${currentRoom.data.id}/join`, { isAdmin: true });
     } catch (e) {
       console.error(e);
