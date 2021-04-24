@@ -16,9 +16,10 @@ const extra = (
 export const JoinToSessoin = () => {
   return (
     <Container>
-          <Header as='h2' color='#009C95' >
-     DODAĆ NAZWĘ ZESPOAŁU
+    <Header as='h2' color='#009C95' >
+    <Card.Header style={{fontSize:'40px', color:"#696969", fontStyle:"bolder"}}>AIO PRO TEAM</Card.Header>
     </Header>
+        
       <Left>
 <Card style={{height:400 }}>
           <Image src={createRoom} />
@@ -39,7 +40,7 @@ export const JoinToSessoin = () => {
       <Card style={{height:400 }}>
           <Image src={joinToRoom} />
           <Tag>
-          <Card.Content style={{marginTop:'30px', fontSize:'20px'}}>
+          <Card.Content style={{marginTop:'30px',marginBottom:'35px', fontSize:'20px'}}>
               <Card.Header>PODAJ NUMER SESJI</Card.Header>
             </Card.Content>
           </Tag>
