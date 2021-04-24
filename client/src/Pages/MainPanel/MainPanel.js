@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const MainPanel=()=>{
-
-
-  return(<div>MainPAnel</div>)
-}
+export const MainPanel = () => {
+  return <div>MainPAnel</div>;
+};

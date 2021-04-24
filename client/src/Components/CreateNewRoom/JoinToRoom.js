@@ -4,8 +4,8 @@ import { Form, Button, Input } from 'semantic-ui-react';
 import { Lab } from '../CreateNewRoom/JoinToRoomStyles';
 
 export const JoinToRoom = () => {
-  const [roomId, setRoomId] = useState()
-console.log('roomID')
+  const [roomId, setRoomId] = useState();
+  console.log('roomID');
   const { push } = useHistory();
   const connectToRoom = () => {
     push(`/room/${roomId}/join`);
