@@ -36,7 +36,7 @@ export const Menu = () => {
         </Box2>
         <Box onClick={() => history.push('/contact')}>
           <Container>
-            <Title>Kontakty i suchary</Title>
+            <Title>KONTAKTY I SUCHARY</Title>
           </Container>
         </Box>
       </Wrapper>

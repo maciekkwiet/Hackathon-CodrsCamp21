@@ -63,7 +63,6 @@ export const Title = styled.h2`
   color: #ffffff;
 
   ${Box}:hover & {
-    color: #000;
     transition: all 0.2s ease;
   }
 `;
@@ -171,6 +170,38 @@ export const Container3 = styled.div`
   ${Box3}:hover & {
     padding-top: 2rem;
     background-image: url(${retro});
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+`;
+
+export const Box4 = styled.div`
+  border-style: solid;
+  border-color: #ef3681;
+  cursor: pointer;
+  width: 100%;
+  height: 30vh;
+  padding: 1rem;
+  background: #f8f32b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+`;
+
+export const Container4 = styled.div`
+  position: absolute;
+  text-align: center;
+  height: 2rem;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+
+  ${Box1}:hover & {
+    padding-top: 2rem;
+    background-image: url(${contact});
     height: 100%;
     width: 100%;
     transition: all 0.2s ease;
