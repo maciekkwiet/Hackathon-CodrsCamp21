@@ -11,7 +11,7 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/daily">
+        <Route path="/board">
           <DailyPage />
         </Route>
         <Route path="/beer">
