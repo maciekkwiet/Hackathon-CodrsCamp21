@@ -9,7 +9,7 @@ export const Menu = () => {
       <Wrapper>
         <Box onClick={() => history.push('/daily')}>
           <Container>
-            <Title>DAILY</Title>
+            <Title>BOARD</Title>
             <Description>Tutaj...</Description>
           </Container>
         </Box>
