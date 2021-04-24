@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useSocket } from 'socketio-hooks';
 import Carousel from 'react-elastic-carousel'
 import './Contact.css';
+import { Card } from 'semantic-ui-react'
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import {
   Container,
@@ -13,20 +14,15 @@ import {
 } from '../Daily/DailyStyles';
 
 const jokes = [
-'Jaka jest ulubiona zemsta cukiernika? Słodka.',
-'Co robi sprzątaczka na scenie? Wymiata.',
-'Co mówi ksiądz na ślubie informatyka? Pobieranie zakończone.',
-'Dlaczego beton nie ma pracy? Bo go wylali.',
-'Dlaczego deszcz siedzi w więzieniu? Bo napadał.',
-'Co mówi drwal, gdy za dużo wypije? Ale się narąbałem.',
-'Jaka jest ulubiona dyscyplina sportu informatyka? Rzut dyskiem.',
-'Jak piją wódkę konduktorzy? Po kolei.',
-'Co robią Transformersi wychodząc z imprezy? Składają się na taksówkę.',
-'Dlaczego wulkan dostał piątkę na lekcji? Bo był aktywny.',
-'Co mówi informatyk, gdy dostanie pendriva na urodziny? Dzięki za pamięć.',
-'Dlaczego ściany nie toczą ze sobą wojny? Bo między nimi jest pokój.',
-'Dlaczego Jasiu tańczy z ciastkiem? Bo to jego ulubiony kawałek.',
-'Dlaczego matematyka jest jak dobra impreza? Bo nikt nie ogarnia.'
+  {pytanie:'Jaka jest ulubiona zemsta cukiernika?' , odpowiedz:' Słodka'},
+  {pytanie:'Co robi sprzątaczka na scenie?' , odpowiedz:' Wymiata'},
+  {pytanie:'Co mówi ksiądz na ślubie informatyka?' , odpowiedz:' Pobieranie zakończone.'},
+  {pytanie:'Dlaczego beton nie ma pracy?' , odpowiedz:' Bo napadał.'},
+  {pytanie:'Dlaczego deszcz siedzi w więzieniu?' , odpowiedz:' Słodka'},
+  {pytanie:'Co mówi drwal, gdy za dużo wypije?' , odpowiedz:' Ale się narąbałem.'},
+  {pytanie:'Jaka jest ulubiona dyscyplina sportu informatyka?' , odpowiedz:' Rzut dyskiem'},
+  {pytanie:'Jak piją wódkę konduktorzy?' , odpowiedz:' Składają się na taksówkę.'},
+  {pytanie:'Co robią Transformersi wychodząc z imprezy?' , odpowiedz:' Słodka'},
 ];
 
 export const ContactPage = () => {
@@ -60,14 +56,10 @@ export const ContactPage = () => {
         </Icons>
       </Navi>
   <div>
-  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-</Carousel>
+    <div styles={{marigin:50}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
+  {jokes.map((item)=>(<div><h3>{item.pytanie}</h3> <h4>{item.odpowiedz}</h4></div> ))}
+</Carousel></div>
+
   </div>
     </Container>
   );
