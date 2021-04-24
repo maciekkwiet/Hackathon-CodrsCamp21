@@ -12,8 +12,8 @@ const onChangeTable = (io: any, socket: any) => ({
     const room = rooms.getRoom(roomId);
     const message = `Table was changed in room: ${roomId}`;
     socket.join(roomId.toString());
-    io.to(roomId).emit("CHANGED_TABLE", room.setTableData(data));
-    io.to(roomId).emit("FEED", message);
+    socket.to(roomId).emit("CHANGED_TABLE", room.setTableData(data));
+    socket.to(roomId).emit("FEED", message);
   } catch (ex) {
     console.error(ex);
   }
