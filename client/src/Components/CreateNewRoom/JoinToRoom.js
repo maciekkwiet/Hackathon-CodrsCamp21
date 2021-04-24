@@ -5,12 +5,11 @@ import { Lab } from '../CreateNewRoom/JoinToRoomStyles';
 
 export const JoinToRoom = () => {
   const [roomId, setRoomId] = useState();
-  console.log('roomID');
   const { push } = useHistory();
   const connectToRoom = () => {
     push(`/room/${roomId}/join`);
   };
-  console.log('room', roomId);
+
   return (
     <>
       <Form onSubmit={connectToRoom} autoComplete="off">

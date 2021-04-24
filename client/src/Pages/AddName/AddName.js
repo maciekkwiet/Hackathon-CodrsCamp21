@@ -4,7 +4,7 @@ import { Image } from 'semantic-ui-react';
 import meeting from '../../assets/meeting.jpg';
 
 import { useParams, useHistory, useLocation } from 'react-router-dom';
-import { useEmit } from 'socketio-hooks';
+import { useEmit, useSocket } from 'socketio-hooks';
 
 export const AddName = () => {
   const defaultName = window.localStorage.getItem('DEFAULT_NAME') ?? '';
@@ -21,12 +21,14 @@ export const AddName = () => {
     console.log(nameUser);
 
     joinRoom({ name: nameUser, roomId, isAdmin: false }, ({ room, token }) => {
-      console.log('SSS');
       setIsLoading(false);
-      history.push(`/room/${roomId}`);
     });
     setIsLoading(true);
   };
+
+  useSocket('USER_JOINED', users => {
+    history.push(`/room/${roomId}`);
+  });
 
   return (
     <div>
