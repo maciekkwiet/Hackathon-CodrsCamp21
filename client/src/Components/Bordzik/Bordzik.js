@@ -40,8 +40,8 @@ export const Bordzik = () => {
     const fetchData = async () => {
       let sessionId = localStorage.getItem('sessionId');
       const result = await axios.get('http://localhost:4000/api/taskTable/', { params: { roomId: sessionId } });
-      console.log(result);
-      setData(result.data);
+      console.log(result.data.data);
+      setData(result.data.data);
     };
     fetchData();
   }, []);
