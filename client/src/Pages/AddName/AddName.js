@@ -18,16 +18,15 @@ export const AddName = () => {
 
   const onSubmitHandler = () => {
     window.localStorage.setItem('DEFAULT_NAME', nameUser);
-    console.log(nameUser);
 
     joinRoom({ name: nameUser, roomId, isAdmin: false }, ({ room, token }) => {
-      console.log('dupa in joinROom');
       setIsLoading(false);
     });
     setIsLoading(true);
   };
 
   useSocket('USER_JOINED', users => {
+    console.log('addName' + users);
     localStorage.setItem('users', JSON.stringify(users));
     history.push(`/room/${roomId}`);
   });

@@ -10,9 +10,9 @@ export const Bordzik = () => {
   const [data, setData] = useState({
     lanes: [
       {
-        id: '',
-        title: '',
-        label: '',
+        id: 'lane1',
+        title: 'Do zrobienia',
+        label: '0/0',
         cards: [],
       },
     ],
@@ -26,15 +26,17 @@ export const Bordzik = () => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   const setDataAPI = async () => {
-  //     changeTable({ roomId: sessionId }, ({ room, token }) => {});
-  //   };
-  //   setDataAPI();
-  // }, [data]);
+  useEffect(() => {
+    console.log(data);
+    const setDataAPI = async () => {
+      changeTable({ roomId: sessionId, data }, ({ room, token }) => {});
+    };
+    setDataAPI();
+  }, [data]);
 
   useSocket('CHANGED_TABLE', newData => {
-    setData(newData);
+    console.log('newData' + newData);
+    if (newData) setData(newData);
   });
 
   return <StyledBoard data={data} editable editLaneTitle draggable canAddLanes onDataChange={setData}></StyledBoard>;

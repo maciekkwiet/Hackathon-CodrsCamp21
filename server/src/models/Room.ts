@@ -52,7 +52,6 @@ class Room {
 
   setTableData(data: any) {
     this.tableData = data;
-    console.log(this.tableData);
   }
 }
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
+import { useSocket } from 'socketio-hooks';
 import { Bordzik } from '../../Components/Bordzik/Bordzik';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
@@ -13,9 +14,12 @@ export const DailyPage = () => {
     history.push('/menu');
   }
 
+  useSocket('USER_JOINED', users => {
+    console.log('DAILY' + users);
+  });
+
   useEffect(() => {
     let users = JSON.parse(localStorage.getItem('users'));
-    console.log(users[0].name);
     setPeoples(users);
   }, []);
 
