@@ -1,6 +1,4 @@
-import * as socketio from "socket.io";
-
-import { User } from "@models/User";
+import { User } from "@models/user";
 import { rooms } from "@models/Rooms";
 
 interface UserJoinPayload {
@@ -9,7 +7,7 @@ interface UserJoinPayload {
   isAdmin: boolean;
 }
 
-const onUserJoin = (io: socketio.Server, socket: socketio.Socket) => ({
+const onUserJoin = (io: any, socket: any) => ({
   name,
   roomId,
   isAdmin,
