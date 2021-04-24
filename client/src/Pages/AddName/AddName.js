@@ -21,12 +21,14 @@ export const AddName = () => {
     console.log(nameUser);
 
     joinRoom({ name: nameUser, roomId, isAdmin: false }, ({ room, token }) => {
+      console.log('dupa in joinROom');
       setIsLoading(false);
     });
     setIsLoading(true);
   };
 
   useSocket('USER_JOINED', users => {
+    localStorage.setItem('users', JSON.stringify(users));
     history.push(`/room/${roomId}`);
   });
 

@@ -1,17 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
-import { peoples } from '../Daily/Daily';
-
 export const RetroPage = () => {
   const [show, setShow] = useState(false);
+  const [peoples, setPeoples] = useState([{ name: '' }]);
   let history = useHistory();
 
   function handleReturn() {
     history.push('/menu');
   }
+
+  useEffect(() => {
+    let users = JSON.parse(localStorage.getItem('users'));
+    console.log(users[0].name);
+    setPeoples(users);
+  }, []);
 
   return (
     <Container>
@@ -30,7 +35,7 @@ export const RetroPage = () => {
         {peoples.map(person => {
           return (
             <Person>
-              <Name>{`${person.name} ${person.surname}`}</Name>
+              <Name>{`${person.name}`}</Name>
             </Person>
           );
         })}
