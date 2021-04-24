@@ -9,7 +9,7 @@ import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Nam
 export const BeerPage = () => {
   const [show, setShow] = useState(false);
   // const [peoples, setPeoples] = useState([{ name: '' }]);
-  const [userssss, setUsers] = useState();
+  const [users2, setUsers] = useState();
   let history = useHistory();
 
   function handleReturn() {
@@ -17,15 +17,15 @@ export const BeerPage = () => {
   }
 
   useSocket('USER_JOINED', users => {
+    console.log('XDDDD');
     console.log(users);
-    setUsers(userssss);
+    setUsers(users);
   });
 
-  // useEffect(() => {
-  //   let users = JSON.parse(localStorage.getItem('users'));
-  //   console.log(users[0].name);
-  //   setPeoples(users);
-  // }, []);
+  useEffect(() => {
+    let users = JSON.parse(localStorage.getItem('users'));
+    setUsers(users);
+  }, []);
 
   return (
     <Container>
@@ -41,7 +41,7 @@ export const BeerPage = () => {
       </Navi>
       <SideContainer show={show}>
         <Title>Na spotkaniu:</Title>
-        {userssss?.map(person => {
+        {users2?.map(person => {
           return (
             <Person>
               <Name>{`${person.name}`}</Name>
