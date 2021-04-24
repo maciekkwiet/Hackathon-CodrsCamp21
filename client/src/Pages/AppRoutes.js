@@ -17,9 +17,6 @@ export const AppRoutes = () => {
         <Route path="/beer">
           <BeerPage />
         </Route>
-        <Route path="/menu">
-          <Menu />
-        </Route>
         <Route path="/retro">
           <RetroPage />
         </Route>
@@ -27,7 +24,7 @@ export const AppRoutes = () => {
           <AddName />
         </Route>
         <Route path="/room/:roomId">
-          <MainPanel />
+        <Menu />
         </Route>
         <Route path="/">
           <JoinToSessoin />
