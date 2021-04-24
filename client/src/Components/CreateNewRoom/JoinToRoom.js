@@ -23,6 +23,7 @@ export const JoinToRoom = () => {
             value={roomId}
             onChange={e => {
               setRoomId(e.target.value);
+              localStorage.setItem('sessionId', e.target.value);
             }}
             required={true}
           />
