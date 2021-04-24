@@ -1,4 +1,3 @@
-import Board from 'react-trello';
 import { useState, useEffect } from 'react';
 
 import { StyledBoard } from '../Bordzik/BordzikStyles';
