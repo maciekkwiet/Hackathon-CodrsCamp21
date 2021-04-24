@@ -9,7 +9,7 @@ import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Nam
 export const BeerPage = () => {
   const [show, setShow] = useState(false);
   const [peoples, setPeoples] = useState([{ name: '' }]);
-  const [users, setUsers] = useState();
+  // const [users, setUsers] = useState();
   let history = useHistory();
 
   function handleReturn() {
