@@ -9,7 +9,11 @@ import {
   Navi,
   Icons,
   StyledButton,
-  StyledButton1
+  StyledButton1,
+  SideContainer,
+  Title,
+  Person,
+  Name,
 } from '../Daily/DailyStyles';
 
 const jokes = [
@@ -59,6 +63,16 @@ export const ContactPage = () => {
           </StyledButton1>
         </Icons>
       </Navi>
+      <SideContainer show={show}>
+        <Title>Na spotkaniu:</Title>
+        {peoples.map(person => {
+          return (
+            <Person>
+              <Name>{`${person.name}`}</Name>
+            </Person>
+          );
+        })}
+      </SideContainer>
   <div>
   <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
   <div>1</div>
