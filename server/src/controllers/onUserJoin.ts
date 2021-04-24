@@ -12,9 +12,6 @@ const onUserJoin = (io: any, socket: any) => ({
   roomId,
   isAdmin,
 }: UserJoinPayload) => {
-  console.log(name);
-  console.log(roomId);
-  console.log(isAdmin);
   try {
     const user = new User(name, socket.id, isAdmin);
     const room = rooms.getRoom(roomId);
