@@ -2,9 +2,9 @@ import { Card, Image } from 'semantic-ui-react';
 import { Wrapper } from './AvatarCardStyles';
 
 export const AvatarCard = () => (
-  <Wrapper styles={{margin:50}}>
+  <Wrapper styles={{ margin: 50 }}>
     <Card style={{ margin: '5px' }}>
-      <Image src="https://avatarfiles.alphacoders.com/152/thumb-152919.png" wrapped ui={false} />
+      <Image src="https://trendygwentleman.com/static/img/avatars/48265.jpg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Sebastian</Card.Header>
         <Card.Meta>
@@ -15,7 +15,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 50 }}>
-      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
+      <Image src="https://trendygwentleman.com/static/img/avatars/48252.jpg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Maciej</Card.Header>
         <Card.Meta>
@@ -26,7 +26,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
+      <Image src="https://trendygwentleman.com/static/img/avatars/48266.jpg" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Mariusz</Card.Header>
         <Card.Meta>
