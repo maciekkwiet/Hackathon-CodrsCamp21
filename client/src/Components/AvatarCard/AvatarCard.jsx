@@ -1,10 +1,10 @@
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import { Wrapper } from './AvatarCardStyles';
 
 export const AvatarCard = () => (
   <Wrapper>
     <Card style={{ margin: '5px' }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://avatarfiles.alphacoders.com/152/thumb-152919.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Klara</Card.Header>
         <Card.Meta>
@@ -15,7 +15,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Maciej</Card.Header>
         <Card.Meta>
@@ -26,7 +26,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Mariusz</Card.Header>
         <Card.Meta>
@@ -37,7 +37,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Kamil</Card.Header>
         <Card.Meta>

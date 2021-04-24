@@ -33,11 +33,9 @@ export const ContactPage = () => {
           <StyledButton1 onClick={() => setShow(!show)}>
             <FaUserFriends size={'2rem'} />
           </StyledButton1>
-          <div>Contact</div>
         </Icons>
       </Navi>
       <AvatarCard></AvatarCard>
-      <div></div>
     </Container>
   );
 };
