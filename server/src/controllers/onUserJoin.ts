@@ -20,6 +20,8 @@ const onUserJoin = (io: any, socket: any) => ({
     socket.join(roomId.toString());
     io.to(roomId).emit("USER_JOINED", room.getUsers());
     io.to(roomId).emit("FEED", message);
+    socket.to(roomId).emit("USER_JOINED", room.getUsers());
+    socket.to(roomId).emit("FEED", message);
   } catch (ex) {
     console.error(ex);
   }
