@@ -6,13 +6,20 @@ import './Contact.css';
 import { Card } from 'semantic-ui-react'
 import styled from 'styled-components';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
+
+import './Contact.css';
 import {
   Container,
   Navi,
   Icons,
   StyledButton,
-  StyledButton1
+  StyledButton1,
+  SideContainer,
+  Title,
+  Person,
+  Name,
 } from '../Daily/DailyStyles';
+import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
 
 
 import background from '../../assets/background.png';
@@ -68,8 +75,19 @@ export const ContactPage = () => {
       </Navi>
       <Full>
   <div>
+  <SideContainer show={show}>
+        <Title>Na spotkaniu:</Title>
+        {peoples.map(person => {
+          return (
+            <Person>
+              <Name>{`${person.name}`}</Name>
+            </Person>
+          );
+        })}
+      </SideContainer>
+      <AvatarCard></AvatarCard>
 
-    <div styles={{marigin:50}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
+    <div style={{padding:'0 50px 0 50px'}}>  <Carousel itemsToShow={1} className="styling-example" style={{marginTop:50, position:'absolute'}}>
   {jokes.map((item)=>(<div><h3>{item.pytanie}</h3> <h4>{item.odpowiedz}</h4></div> ))}
 </Carousel></div>
 
@@ -79,3 +97,10 @@ export const ContactPage = () => {
    
   );
 };
+
+
+
+
+
+
+

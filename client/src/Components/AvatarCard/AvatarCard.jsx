@@ -1,21 +1,21 @@
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import { Wrapper } from './AvatarCardStyles';
 
 export const AvatarCard = () => (
-  <Wrapper>
+  <Wrapper styles={{margin:50}}>
     <Card style={{ margin: '5px' }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://avatarfiles.alphacoders.com/152/thumb-152919.png" wrapped ui={false} />
       <Card.Content>
-        <Card.Header>Klara</Card.Header>
+        <Card.Header>Sebastian</Card.Header>
         <Card.Meta>
-          <span className="date">klara@noodle.com</span>
+          <span className="date">sebastian@noodle.com</span>
         </Card.Meta>
-        <Card.Description>Klara is a Noodle Senior Software Engineer.</Card.Description>
+        <Card.Description>Sebastian is a Noodle Senior Software Engineer.</Card.Description>
       </Card.Content>
     </Card>
 
-    <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+    <Card style={{ margin: 50 }}>
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Maciej</Card.Header>
         <Card.Meta>
@@ -26,7 +26,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Mariusz</Card.Header>
         <Card.Meta>
@@ -37,7 +37,7 @@ export const AvatarCard = () => (
     </Card>
 
     <Card style={{ margin: 0 }}>
-      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
+      <Image src="https://gwent.one/image/rewards/s01-avatar_03.png" wrapped ui={false} />
       <Card.Content>
         <Card.Header>Kamil</Card.Header>
         <Card.Meta>
