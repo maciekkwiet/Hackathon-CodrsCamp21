@@ -1,14 +1,14 @@
 {
-  "name": "meme-poker",
+  "name": "heckathon-camp21",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "prettier --write",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "(cd server && npm i --dev) & (cd client && npm i --dev)",
-    "heroku-postbuild": "cd client && npm run build",
-    "start": "cd server && npm run start:prod"
+    "install": "(cd server && yarn) & (cd client && yarn)",
+    "heroku-postbuild": "cd client && yarn build",
+    "start": "cd server && yarn start:prod"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "npm run lint"
+      "yarn run lint"
     ]
   },
   "husky": {
