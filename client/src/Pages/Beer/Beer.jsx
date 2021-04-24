@@ -8,17 +8,23 @@ import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Nam
 
 export const BeerPage = () => {
   const [show, setShow] = useState(false);
-  const [peoples, setPeoples] = useState([{ name: '' }]);
+  // const [peoples, setPeoples] = useState([{ name: '' }]);
+  const [users2, setUsers] = useState();
   let history = useHistory();
 
   function handleReturn() {
     history.push('/menu');
   }
 
+  useSocket('USER_JOINED', users => {
+    console.log('XDDDD');
+    console.log(users);
+    setUsers(users);
+  });
+
   useEffect(() => {
     let users = JSON.parse(localStorage.getItem('users'));
-    console.log(users[0].name);
-    setPeoples(users);
+    setUsers(users);
   }, []);
 
   return (
@@ -35,7 +41,7 @@ export const BeerPage = () => {
       </Navi>
       <SideContainer show={show}>
         <Title>Na spotkaniu:</Title>
-        {peoples.map(person => {
+        {users2?.map(person => {
           return (
             <Person>
               <Name>{`${person.name}`}</Name>
