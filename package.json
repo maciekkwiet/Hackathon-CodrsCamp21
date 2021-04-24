@@ -7,8 +7,8 @@
     "lint": "prettier --write",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "(cd server && yarn) & (cd client && yarn)",
-    "heroku-postbuild": "cd client && yarn run build",
-    "start": "cd server && yarn run start:prod"
+    "heroku-postbuild": "cd client && yarn build",
+    "start": "cd server && yarn start:prod"
   },
   "author": "",
   "license": "ISC",
