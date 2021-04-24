@@ -16,13 +16,13 @@ export const AddName = () => {
   const joinRoom = useEmit('USER_JOIN');
   const [nameUser, setNameUser] = useState('');
 
-  console.log();
   const onSubmitHandler = () => {
     window.localStorage.setItem('DEFAULT_NAME', nameUser);
+    console.log(nameUser);
 
-    joinRoom({ nameUser, roomId, isAdmin: state?.isAdmin, isObserver }, ({ room, token }) => {
+    joinRoom({ name: nameUser, roomId, isAdmin: false }, ({ room, token }) => {
+      console.log('SSS');
       setIsLoading(false);
-      console.log('FFDF');
       history.push(`/room/${roomId}`);
     });
     setIsLoading(true);
@@ -57,15 +57,7 @@ export const AddName = () => {
                   setNameUser(e.target.value);
                 }}
               />
-              <Button
-                color="teal"
-                type="submit"
-                fluid
-                size="large"
-                onClick={() => {
-                  onSubmitHandler();
-                }}
-              >
+              <Button color="teal" type="submit" fluid size="large">
                 Dołączam
               </Button>
             </Segment>

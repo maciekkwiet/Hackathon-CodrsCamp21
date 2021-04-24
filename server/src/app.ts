@@ -12,8 +12,6 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-// socketController(server);
-
 const dbKey = process.env.DB_KEY;
 
 console.log("XDDD");

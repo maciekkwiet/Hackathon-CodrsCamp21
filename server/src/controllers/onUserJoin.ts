@@ -12,18 +12,15 @@ const onUserJoin = (io: any, socket: any) => ({
   roomId,
   isAdmin,
 }: UserJoinPayload) => {
-  console.log("TEST1");
+  console.log(name);
+  console.log(roomId);
+  console.log(isAdmin);
   try {
     const user = new User(name, socket.id, isAdmin);
-    console.log("TEST2");
     const room = rooms.getRoom(roomId);
-    console.log("TEST3");
     const message = `${name} has joined the room: ${roomId}`;
-    console.log("TEST4");
     room.addUser(user);
-    console.log("TEST5");
     socket.join(roomId.toString());
-    console.log("TEST6");
     io.to(roomId).emit("USER_JOINED", room.getUsers());
     io.to(roomId).emit("FEED", message);
   } catch (ex) {

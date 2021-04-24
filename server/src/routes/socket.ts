@@ -3,12 +3,10 @@ import * as http from "http";
 import { onUserJoin } from "@controllers/onUserJoin";
 
 const socketController = (server: http.Server): void => {
-  const io = socket(server);
+  const io = socket(server, { allowEIO3: true });
 
-  io.on("connect", (socket: any): void => {
-    console.log("DUPAV33");
-    socket.on("USER_JOINED", onUserJoin(io, socket));
-    console.log("DUPAV11");
+  io.on("connection", (socket: any): void => {
+    socket.on("USER_JOIN", onUserJoin(io, socket));
   });
 };
 
