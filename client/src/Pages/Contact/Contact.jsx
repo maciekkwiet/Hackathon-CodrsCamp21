@@ -2,13 +2,8 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'socketio-hooks';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
-import {
-  Container,
-  Navi,
-  Icons,
-  StyledButton,
-  StyledButton1
-} from '../Daily/DailyStyles';
+import { Container, Navi, Icons, StyledButton, StyledButton1 } from '../Daily/DailyStyles';
+import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
 
 export const ContactPage = () => {
   const [show, setShow] = useState(false);
@@ -41,8 +36,8 @@ export const ContactPage = () => {
           <div>Contact</div>
         </Icons>
       </Navi>
-  <div>
-  </div>
+      <AvatarCard></AvatarCard>
+      <div></div>
     </Container>
   );
 };
