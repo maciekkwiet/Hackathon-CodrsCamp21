@@ -1,7 +1,18 @@
-import { Full, Wrapper, Box,Box1,Container1,Box2,Container2,Box3,Container3,  Container, Title, Description } from './MenuStyles';
+import {
+  Full,
+  Wrapper,
+  Box,
+  Box1,
+  Container1,
+  Box2,
+  Container2,
+  Box3,
+  Container3,
+  Container,
+  Title,
+  Description,
+} from './MenuStyles';
 import { useHistory } from 'react-router-dom';
-import { Image } from 'semantic-ui-react'
-import dayli from '../../assets/dayli.jpg'
 
 export const Menu = () => {
   let history = useHistory();
@@ -9,10 +20,9 @@ export const Menu = () => {
   return (
     <Full>
       <Wrapper>
-        <Box1 onClick={() => history.push('/daily')}>
+        <Box1 onClick={() => history.push('/board')}>
           <Container1>
-            <Title>DAILY</Title>
-            {/* <Image src={dayli}rounded size='small'/> */}
+            <Title>BOARD</Title>
             <Description>Tutaj...</Description>
           </Container1>
         </Box1>

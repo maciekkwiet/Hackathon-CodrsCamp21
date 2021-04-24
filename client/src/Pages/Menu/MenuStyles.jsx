@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 import dayli from '../../assets/dayli.jpg';
-import background from '../../assets/background.png'
-import beer from '../../assets/beer.jpg'
-import retro from '../../assets/retro.jpg'
-
+import background from '../../assets/background.png';
+import beer from '../../assets/beer.jpg';
+import retro from '../../assets/retro.jpg';
 
 export const Full = styled.div`
   justify-content: center;
@@ -28,7 +27,7 @@ export const Wrapper = styled.div`
 
 export const Box = styled.div`
   border-style: solid;
-border-color: #EF3681;
+  border-color: #ef3681;
   cursor: pointer;
   width: 100%;
   height: 30vh;
@@ -81,10 +80,9 @@ export const Description = styled.p`
   }
 `;
 
-
 export const Box1 = styled.div`
   border-style: solid;
-border-color: #EF3681;
+  border-color: #ef3681;
   cursor: pointer;
   width: 100%;
   height: 30vh;
@@ -114,17 +112,14 @@ export const Container1 = styled.div`
   }
 `;
 
-
-
-
 export const Box2 = styled.div`
   border-style: solid;
-border-color: #f744d0;
+  border-color: #f744d0;
   cursor: pointer;
   width: 100%;
   height: 30vh;
   padding: 1rem;
-  background: #00A9FF;
+  background: #00a9ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,15 +144,14 @@ export const Container2 = styled.div`
   }
 `;
 
-
 export const Box3 = styled.div`
   border-style: solid;
-border-color: #f744d0;
+  border-color: #f744d0;
   cursor: pointer;
   width: 100%;
   height: 30vh;
   padding: 1rem;
-  background: #00A9FF;
+  background: #00a9ff;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -14,7 +14,6 @@ export const Container = styled.div`
   background-image: url(${background});
 `;
 
-
 export const AddName = () => {
   const defaultName = window.localStorage.getItem('DEFAULT_NAME') ?? '';
   const [isObserver, setObserver] = useState(false);

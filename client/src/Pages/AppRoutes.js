@@ -1,7 +1,6 @@
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import { JoinToSessoin } from './JoinToSession/JoinToSession';
 import { AddName } from './AddName/AddName';
-import { MainPanel } from './MainPanel/MainPanel';
 import { DailyPage } from './Daily/Daily';
 import { Menu } from './Menu/Menu';
 import { RetroPage } from './Retro/Retro';
@@ -11,7 +10,7 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/daily">
+        <Route path="/board">
           <DailyPage />
         </Route>
         <Route path="/beer">
@@ -24,7 +23,7 @@ export const AppRoutes = () => {
           <AddName />
         </Route>
         <Route path="/room/:roomId">
-        <Menu />
+          <Menu />
         </Route>
         <Route path="/">
           <JoinToSessoin />

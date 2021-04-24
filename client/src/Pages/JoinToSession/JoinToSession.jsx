@@ -10,9 +10,6 @@ export const Container = styled.div`
   background-image: url(${background});
 `;
 
-
-
-
 export const Header = styled.div`
   grid-column-start: 2;
   grid-column-end: 5;
