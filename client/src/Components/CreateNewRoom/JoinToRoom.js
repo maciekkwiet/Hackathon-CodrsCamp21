@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 export const JoinToRoom = () => {
   const [roomId, setRoomId] = useState()
-
+console.log('roomID')
   const { push } = useHistory();
   const connectToRoom = () => {
     push(`/room/${roomId}/join`);
