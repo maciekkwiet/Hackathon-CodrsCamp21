@@ -5,6 +5,7 @@ export const Full = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 10%;
+  background: #2b2d42;
 `;
 
 export const Wrapper = styled.div`
@@ -37,20 +38,28 @@ export const Container = styled.div`
   position: absolute;
   text-align: center;
   height: 2rem;
-  transition: all 0.2s ease;
+  transition: all 0.7s ease;
   border-radius: 5px;
 
   ${Box}:hover & {
     padding-top: 1rem;
     background: #f8f32b;
-    height: 80%;
-    width: 80%;
-    transition: all 0.2s ease;
+    height: 100%;
+    width: 100%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    transition: all 0.7s ease;
   }
 `;
 
 export const Title = styled.h2`
   font-size: 3rem;
+  color: #ffffff;
+
+  ${Box}:hover & {
+    color: #000;
+    transition: all 0.7s ease;
+  }
 `;
 
 export const Description = styled.p`
@@ -62,6 +71,6 @@ export const Description = styled.p`
     height: 100%;
     opacity: 1;
     visibility: visible;
-    transition: all 0.2s ease;
+    transition: all 0.7s ease;
   }
 `;
