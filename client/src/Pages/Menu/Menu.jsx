@@ -13,8 +13,6 @@ import {
   Description,
 } from './MenuStyles';
 import { useHistory } from 'react-router-dom';
-import { Image } from 'semantic-ui-react';
-import dayli from '../../assets/dayli.jpg';
 
 export const Menu = () => {
   let history = useHistory();
@@ -22,8 +20,8 @@ export const Menu = () => {
   return (
     <Full>
       <Wrapper>
-        <Box onClick={() => history.push('/board')}>
-          <Container>
+        <Box1 onClick={() => history.push('/board')}>
+          <Container1>
             <Title>BOARD</Title>
             <Description>Tutaj...</Description>
           </Container1>

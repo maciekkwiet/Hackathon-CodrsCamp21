@@ -1,7 +1,6 @@
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import { JoinToSessoin } from './JoinToSession/JoinToSession';
 import { AddName } from './AddName/AddName';
-import { MainPanel } from './MainPanel/MainPanel';
 import { DailyPage } from './Daily/Daily';
 import { Menu } from './Menu/Menu';
 import { RetroPage } from './Retro/Retro';
