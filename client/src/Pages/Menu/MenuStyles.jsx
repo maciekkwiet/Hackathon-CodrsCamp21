@@ -38,17 +38,15 @@ export const Container = styled.div`
   position: absolute;
   text-align: center;
   height: 2rem;
-  transition: all 0.7s ease;
+  transition: all 0.2s ease;
   border-radius: 5px;
 
   ${Box}:hover & {
-    padding-top: 1rem;
+    padding-top: 2rem;
     background: #f8f32b;
     height: 100%;
     width: 100%;
-    border-top: 5px solid #000;
-    border-bottom: 5px solid #000;
-    transition: all 0.7s ease;
+    transition: all 0.2s ease;
   }
 `;
 
@@ -58,7 +56,7 @@ export const Title = styled.h2`
 
   ${Box}:hover & {
     color: #000;
-    transition: all 0.7s ease;
+    transition: all 0.2s ease;
   }
 `;
 
@@ -71,6 +69,6 @@ export const Description = styled.p`
     height: 100%;
     opacity: 1;
     visibility: visible;
-    transition: all 0.7s ease;
+    transition: all 0.2s ease;
   }
 `;

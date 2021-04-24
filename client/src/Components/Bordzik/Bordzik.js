@@ -38,12 +38,13 @@ export const Bordzik = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('http://localhost:4000/api/taskTable/');
+      let sessionId = localStorage.getItem('sessionId');
+      const result = await axios.get('http://localhost:4000/api/taskTable/', { params: { roomId: sessionId } });
       console.log(result);
-      setData(result);
+      setData(result.data);
     };
     fetchData();
-  }, [data]);
+  }, []);
 
   console.log(data);
   return <StyledBoard data={data} editable editLaneTitle draggable canAddLanes onDataChange={setData}></StyledBoard>;
