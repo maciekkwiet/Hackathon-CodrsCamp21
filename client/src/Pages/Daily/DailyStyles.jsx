@@ -97,6 +97,6 @@ export const StyledButton1 = styled.button`
 
   &:hover,
   &:focus {
-    background: #a9e704;
+    background: #e0f2f1;
   }
 `;
