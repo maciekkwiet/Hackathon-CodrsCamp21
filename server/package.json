@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/cookie-parser": "^1.4.2",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
@@ -26,8 +27,6 @@
   },
   "devDependencies": {
     "@hapi/joi": "^17.1.1",
-    "@types/cookie-parser": "^1.4.2",
-    "@types/express": "^4.17.6",
     "@types/mongoose": "^5.7.24",
     "@types/node": "^14.0.13",
     "@types/socket.io": "^2.1.8"
