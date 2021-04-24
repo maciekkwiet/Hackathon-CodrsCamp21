@@ -11,7 +11,7 @@ export const Menu = () => {
       <Wrapper>
         <Box1 onClick={() => history.push('/daily')}>
           <Container1>
-            <Title>DAILY</Title>
+            <Title>TABLICA</Title>
             {/* <Image src={dayli}rounded size='small'/> */}
             <Description>Tutaj...</Description>
           </Container1>
