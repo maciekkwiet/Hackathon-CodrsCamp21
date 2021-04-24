@@ -1,5 +1,20 @@
-import { Full, Wrapper, Box, Container, Title, Description } from './MenuStyles';
+import {
+  Full,
+  Wrapper,
+  Box,
+  Box1,
+  Container1,
+  Box2,
+  Container2,
+  Box3,
+  Container3,
+  Container,
+  Title,
+  Description,
+} from './MenuStyles';
 import { useHistory } from 'react-router-dom';
+import { Image } from 'semantic-ui-react';
+import dayli from '../../assets/dayli.jpg';
 
 export const Menu = () => {
   let history = useHistory();
@@ -11,20 +26,20 @@ export const Menu = () => {
           <Container>
             <Title>BOARD</Title>
             <Description>Tutaj...</Description>
-          </Container>
-        </Box>
-        <Box onClick={() => history.push('/retro')}>
-          <Container>
+          </Container1>
+        </Box1>
+        <Box3 onClick={() => history.push('/retro')}>
+          <Container3>
             <Title>RETRO</Title>
             <Description>A tutaj...</Description>
-          </Container>
-        </Box>
-        <Box onClick={() => history.push('/beer')}>
-          <Container>
+          </Container3>
+        </Box3>
+        <Box2 onClick={() => history.push('/beer')}>
+          <Container2>
             <Title>PIWO</Title>
             <Description>Natomiast tutaj...</Description>
-          </Container>
-        </Box>
+          </Container2>
+        </Box2>
         <Box onClick={() => history.push('/todo')}>
           <Container>
             <Title>TODO</Title>

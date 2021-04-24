@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
+import dayli from '../../assets/dayli.jpg';
+import background from '../../assets/background.png';
+import beer from '../../assets/beer.jpg';
+import retro from '../../assets/retro.jpg';
+
 export const Full = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
   padding: 10%;
-  background: #2b2d42;
+  background-image: url(${background});
 `;
 
 export const Wrapper = styled.div`
@@ -21,11 +26,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Box = styled.div`
+  border-style: solid;
+  border-color: #ef3681;
   cursor: pointer;
   width: 100%;
   height: 30vh;
   padding: 1rem;
-  background: #067bc2;
+  background: #f8f32b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +76,102 @@ export const Description = styled.p`
     height: 100%;
     opacity: 1;
     visibility: visible;
+    transition: all 0.2s ease;
+  }
+`;
+
+export const Box1 = styled.div`
+  border-style: solid;
+  border-color: #ef3681;
+  cursor: pointer;
+  width: 100%;
+  height: 30vh;
+  padding: 1rem;
+  background: #f8f32b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+`;
+
+export const Container1 = styled.div`
+  position: absolute;
+  text-align: center;
+  height: 2rem;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+
+  ${Box1}:hover & {
+    padding-top: 2rem;
+    background-image: url(${dayli});
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+`;
+
+export const Box2 = styled.div`
+  border-style: solid;
+  border-color: #f744d0;
+  cursor: pointer;
+  width: 100%;
+  height: 30vh;
+  padding: 1rem;
+  background: #00a9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+`;
+
+export const Container2 = styled.div`
+  position: absolute;
+  text-align: center;
+  height: 2rem;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+
+  ${Box2}:hover & {
+    padding-top: 2rem;
+    background-image: url(${beer});
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+`;
+
+export const Box3 = styled.div`
+  border-style: solid;
+  border-color: #f744d0;
+  cursor: pointer;
+  width: 100%;
+  height: 30vh;
+  padding: 1rem;
+  background: #00a9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+`;
+
+export const Container3 = styled.div`
+  position: absolute;
+  text-align: center;
+  height: 2rem;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+
+  ${Box3}:hover & {
+    padding-top: 2rem;
+    background-image: url(${retro});
+    height: 100%;
+    width: 100%;
     transition: all 0.2s ease;
   }
 `;

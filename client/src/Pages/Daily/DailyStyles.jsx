@@ -12,7 +12,9 @@ export const Navi = styled.div`
   display: flex;
   justify-content: flex-end;
   min-height: 50px;
-  background: #067bc2;
+
+  background: #00a9ff;
+  padding: 5px;
 `;
 
 //Online people
@@ -27,7 +29,7 @@ export const SideContainer = styled.div`
   width: 30%;
   transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 5;
-  background: #f8f32b;
+  background: #e0f2f1;
   transition: all 0.7s ease;
 `;
 
@@ -64,18 +66,37 @@ export const Icons = styled.div`
 
 export const StyledButton = styled.button`
   padding: 0;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   border: none;
-  border-bottom: 5px solid #ffffff;
-  background: #067bc2;
+  background: #ffff;
+  margin: 10px;
 
   &:hover,
   &:focus {
-    background: #f8f32b;
-    border-bottom: 5px solid #000000;
+    background: #e0f2f1;
+  }
+`;
+
+export const StyledButton1 = styled.button`
+  padding: 0;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #a9e704;
+  margin: 10;
+
+  &:hover,
+  &:focus {
+    background: #a9e704;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import background from '../../assets/background.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -6,7 +7,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 10% 35% 10% 35% 10%;
   grid-template-rows: 20% auto 30%;
-  background-color: #067bc2;
+  background-image: url(${background});
 `;
 
 export const Header = styled.div`

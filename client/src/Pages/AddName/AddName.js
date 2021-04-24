@@ -5,6 +5,14 @@ import meeting from '../../assets/meeting.jpg';
 
 import { useParams, useHistory, useLocation } from 'react-router-dom';
 import { useEmit, useSocket } from 'socketio-hooks';
+import styled from 'styled-components';
+import background from '../../assets/background.png';
+
+export const Container = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background-image: url(${background});
+`;
 
 export const AddName = () => {
   const defaultName = window.localStorage.getItem('DEFAULT_NAME') ?? '';
@@ -32,7 +40,7 @@ export const AddName = () => {
   });
 
   return (
-    <div>
+    <Container>
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
         <Grid.Column style={{ width: 450 }}>
           <Header as="h2" color="teal">
@@ -67,6 +75,6 @@ export const AddName = () => {
           </Form>
         </Grid.Column>
       </Grid>
-    </div>
+    </Container>
   );
 };

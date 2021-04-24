@@ -9,8 +9,15 @@ export const RetroPage = () => {
   const [peoples, setPeoples] = useState([{ name: '' }]);
   let history = useHistory();
 
+  useEffect(() => {
+    let users = JSON.parse(localStorage.getItem('users'));
+    console.log(users[0].name);
+    setPeoples(users);
+  }, []);
+
   function handleReturn() {
-    history.push('/menu');
+    const roomId = localStorage.getItem('sessionId');
+    history.push(`/room/${roomId}`);
   }
 
   useEffect(() => {
