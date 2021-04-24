@@ -12,7 +12,22 @@ import {
   StyledButton1
 } from '../Daily/DailyStyles';
 
-
+const jokes = [
+'Jaka jest ulubiona zemsta cukiernika? Słodka.',
+'Co robi sprzątaczka na scenie? Wymiata.',
+'Co mówi ksiądz na ślubie informatyka? Pobieranie zakończone.',
+'Dlaczego beton nie ma pracy? Bo go wylali.',
+'Dlaczego deszcz siedzi w więzieniu? Bo napadał.',
+'Co mówi drwal, gdy za dużo wypije? Ale się narąbałem.',
+'Jaka jest ulubiona dyscyplina sportu informatyka? Rzut dyskiem.',
+'Jak piją wódkę konduktorzy? Po kolei.',
+'Co robią Transformersi wychodząc z imprezy? Składają się na taksówkę.',
+'Dlaczego wulkan dostał piątkę na lekcji? Bo był aktywny.',
+'Co mówi informatyk, gdy dostanie pendriva na urodziny? Dzięki za pamięć.',
+'Dlaczego ściany nie toczą ze sobą wojny? Bo między nimi jest pokój.',
+'Dlaczego Jasiu tańczy z ciastkiem? Bo to jego ulubiony kawałek.',
+'Dlaczego matematyka jest jak dobra impreza? Bo nikt nie ogarnia.'
+];
 
 export const ContactPage = () => {
   const [show, setShow] = useState(false);
