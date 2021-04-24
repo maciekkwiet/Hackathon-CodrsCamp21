@@ -108,7 +108,8 @@ export const MadSadGlad = () => {
   // }
 
   return (
-    <Main>
+    <div className="App">
+      <h2>Retro Board</h2> <br />
       <div className="btn-cntr">
       </div>
       <br />
