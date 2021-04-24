@@ -16,6 +16,8 @@ socketController(server);
 
 const dbKey = process.env.DB_KEY;
 
+console.log("XDDD");
+
 if (dbKey) {
   mongoose
     .connect(dbKey, { useNewUrlParser: true, useUnifiedTopology: true })
