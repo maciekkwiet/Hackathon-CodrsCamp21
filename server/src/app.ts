@@ -16,6 +16,8 @@ socketController(server);
 
 const dbKey = process.env.DB_KEY;
 
+console.log("XDDD");
+
 if (dbKey) {
   mongoose
     .connect(dbKey, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -42,3 +44,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 
 app.use(router);
+
+app.get("/", (request, response) => {
+  response.json({ info: "Teraz tylko robić :P" });
+});
