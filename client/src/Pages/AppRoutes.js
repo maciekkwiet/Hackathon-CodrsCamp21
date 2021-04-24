@@ -5,6 +5,7 @@ import { MainPanel } from './MainPanel/MainPanel';
 import { DailyPage } from './Daily/Daily';
 import { Menu } from './Menu/Menu';
 import { RetroPage } from './Retro/Retro';
+import { BeerPage } from './Beer/Beer';
 
 export const AppRoutes = () => {
   return (
@@ -12,6 +13,9 @@ export const AppRoutes = () => {
       <Switch>
         <Route path="/daily">
           <DailyPage />
+        </Route>
+        <Route path="/beer">
+          <BeerPage />
         </Route>
         <Route path="/menu">
           <Menu />
