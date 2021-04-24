@@ -38,9 +38,9 @@ export const Menu = () => {
             <Description>Natomiast tutaj...</Description>
           </Container2>
         </Box2>
-        <Box onClick={() => history.push('/todo')}>
+        <Box onClick={() => history.push('/contact')}>
           <Container>
-            <Title>TODO</Title>
+            <Title>Kontakty i suchary</Title>
             <Description>Pizza...</Description>
           </Container>
         </Box>
