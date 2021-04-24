@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'socketio-hooks';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
-import { useSocket } from 'socketio-hooks';
 import { Bordzik } from '../../Components/Bordzik/Bordzik';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 

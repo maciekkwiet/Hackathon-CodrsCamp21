@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
+import { MadSadGlad } from '../../Components/MadSadGlad/MadSadGlad';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
 export const RetroPage = () => {
@@ -40,6 +41,7 @@ export const RetroPage = () => {
           );
         })}
       </SideContainer>
+      <MadSadGlad />
     </Container>
   );
 };
