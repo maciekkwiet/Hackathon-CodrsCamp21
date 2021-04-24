@@ -9,4 +9,10 @@ export const Main = styled.div`
 
 `;
 
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+
+`;
+
 export const H2 = styled.h2``;

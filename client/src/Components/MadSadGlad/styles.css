@@ -331,16 +331,16 @@ textarea {
   color: #ffffff;
 }
 .wentWell {
-  background: #01dd89;
+  background: #00A9FF;
   margin: 5px;
 }
 
 .toImprove {
-  background: #f3316b;
+  background: #F8F32B;
   margin: 5px;
 }
 
 .actionItems {
-  background: #c62fda;
+  background: #EF3681;
   margin: 5px;
 }
