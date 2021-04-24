@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Card } from '../../Components/Card/Card';
-import { Main } from './MadSadGladStyles';
 import './styles.css';
 
 export const MadSadGlad = () => {
@@ -117,7 +116,7 @@ export const MadSadGlad = () => {
   // }
 
   return (
-    <Main>
+    <div className="App">
       <h2>Retro Board</h2> <br />
       <div className="btn-cntr">
         <button onClick={toggle} className="ChangeLayout">
@@ -228,6 +227,6 @@ export const MadSadGlad = () => {
           </div>
         </div>
       </div>
-    </Main>
+    </div>
   );
 };
