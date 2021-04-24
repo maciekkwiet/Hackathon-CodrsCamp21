@@ -7,9 +7,9 @@ import { SocketIOProvider } from 'socketio-hooks';
 
 ReactDOM.render(
   <React.StrictMode>
-       <SocketIOProvider url="/"> 
-       <App />
-       </SocketIOProvider>
+    <SocketIOProvider url="/">
+      <App />
+    </SocketIOProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
