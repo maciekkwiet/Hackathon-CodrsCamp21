@@ -5,6 +5,7 @@ import { DailyPage } from './Daily/Daily';
 import { Menu } from './Menu/Menu';
 import { RetroPage } from './Retro/Retro';
 import { BeerPage } from './Beer/Beer';
+import {ContactPage} from './Contact/Contact'
 
 export const AppRoutes = () => {
   return (
@@ -24,6 +25,9 @@ export const AppRoutes = () => {
         </Route>
         <Route path="/room/:roomId">
           <Menu />
+        </Route>
+        <Route path='/contact'>
+          <ContactPage/>
         </Route>
         <Route path="/">
           <JoinToSessoin />

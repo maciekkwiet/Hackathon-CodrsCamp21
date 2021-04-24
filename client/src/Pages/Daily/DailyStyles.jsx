@@ -92,11 +92,11 @@ export const StyledButton1 = styled.button`
   width: 100%;
   height: 100%;
   border: none;
-  background: #a9e704;
+  background: #ffff;
   margin: 10;
 
   &:hover,
   &:focus {
-    background: #a9e704;
+    background: #e0f2f1;
   }
 `;
