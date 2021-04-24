@@ -1,4 +1,4 @@
-import { User } from '@models/User';
+import { User } from "@models/user";
 
 class Room {
   id: string;
@@ -12,21 +12,24 @@ class Room {
   }
 
   getUser(name: string): User {
-    const user = this.users.find(user => user.name === name);
-    if (!user) throw new Error(`User ${name} does not belong to room ${this.id}`);
+    const user = this.users.find((user) => user.name === name);
+    if (!user)
+      throw new Error(`User ${name} does not belong to room ${this.id}`);
     return user;
   }
 
   getAdmin(id: string): User | null {
-    const roomAdmin = this.users.find(user => user.isAdmin === true) ?? null;
-    if (roomAdmin?.socket === id) throw new Error('This user is admin in different room');
+    const roomAdmin = this.users.find((user) => user.isAdmin === true) ?? null;
+    if (roomAdmin?.socket === id)
+      throw new Error("This user is admin in different room");
     return roomAdmin;
   }
 
   addUser(user: User): void {
     const name = user.name;
 
-    if (this.users.find(user => user.name === name)) throw new Error('This user name already exists in room');
+    if (this.users.find((user) => user.name === name))
+      throw new Error("This user name already exists in room");
     this.users.push(user);
   }
 
@@ -39,7 +42,7 @@ class Room {
   }
 
   setTableData(data: any) {
-    this.tableData = data
+    this.tableData = data;
   }
 }
 
