@@ -43,7 +43,7 @@ server.listen(port, () => console.log(`Server listening on port ${port}`));
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 
-// app.use(router);
+app.use(router);
 
 app.get("/", (request, response) => {
   response.json({ info: "Teraz tylko robić :P" });
