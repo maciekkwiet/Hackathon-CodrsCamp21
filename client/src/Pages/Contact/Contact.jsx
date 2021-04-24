@@ -4,7 +4,17 @@ import { useSocket } from 'socketio-hooks';
 import Carousel from 'react-elastic-carousel';
 import './Contact.css';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
-import { Container, Navi, Icons, StyledButton, StyledButton1 } from '../Daily/DailyStyles';
+import {
+  Container,
+  Navi,
+  Icons,
+  StyledButton,
+  StyledButton1,
+  SideContainer,
+  Title,
+  Person,
+  Name,
+} from '../Daily/DailyStyles';
 import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
 
 const jokes = [
@@ -49,6 +59,16 @@ export const ContactPage = () => {
           </StyledButton1>
         </Icons>
       </Navi>
+      <SideContainer show={show}>
+        <Title>Na spotkaniu:</Title>
+        {peoples.map(person => {
+          return (
+            <Person>
+              <Name>{`${person.name}`}</Name>
+            </Person>
+          );
+        })}
+      </SideContainer>
       <AvatarCard></AvatarCard>
       <div>
         <div styles={{ marigin: 50 }}>
