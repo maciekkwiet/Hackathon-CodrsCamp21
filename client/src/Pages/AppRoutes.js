@@ -1,11 +1,10 @@
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import { JoinToSessoin } from './JoinToSession/JoinToSession';
 import { AddName } from './AddName/AddName';
-import { LoginForm } from './LoginForm/Loginform';
 import { MainPanel } from './MainPanel/MainPanel';
 import { DailyPage } from './Daily/Daily';
 import { Menu } from './Menu/Menu';
-import { BeerPage } from '../Pages/Beer/Beer';
+import { RetroPage } from './Retro/Retro';
 
 export const AppRoutes = () => {
   return (
@@ -16,6 +15,9 @@ export const AppRoutes = () => {
         </Route>
         <Route path="/menu">
           <Menu />
+        </Route>
+        <Route path="/retro">
+          <RetroPage />
         </Route>
         <Route path="/room/:roomId/join">
           <AddName />

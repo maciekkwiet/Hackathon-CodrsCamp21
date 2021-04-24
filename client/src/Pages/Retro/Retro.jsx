@@ -1,33 +1,11 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
-import { Bordzik } from '../../Components/Bordzik/Bordzik';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
-export const peoples = [
-  {
-    name: 'Anna',
-    surname: 'Wanna',
-  },
-  {
-    name: 'Andrzej',
-    surname: 'Wanna',
-  },
-  {
-    name: 'Marek',
-    surname: 'Kubek',
-  },
-  {
-    name: 'Janina',
-    surname: 'Koc',
-  },
-  {
-    name: 'Marcin',
-    surname: 'Drzwi',
-  },
-];
+import { peoples } from '../Daily/Daily';
 
-export const DailyPage = () => {
+export const RetroPage = () => {
   const [show, setShow] = useState(false);
   let history = useHistory();
 
@@ -57,7 +35,6 @@ export const DailyPage = () => {
           );
         })}
       </SideContainer>
-      <Bordzik></Bordzik>
     </Container>
   );
 };
