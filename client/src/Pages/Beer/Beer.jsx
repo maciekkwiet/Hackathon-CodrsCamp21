@@ -18,6 +18,7 @@ export const BeerPage = () => {
 
   useSocket('USER_JOINED', users => {
     console.log(users);
+    setUsers(userssss);
   });
 
   // useEffect(() => {
@@ -40,7 +41,7 @@ export const BeerPage = () => {
       </Navi>
       <SideContainer show={show}>
         <Title>Na spotkaniu:</Title>
-        {userssss.map(person => {
+        {userssss?.map(person => {
           return (
             <Person>
               <Name>{`${person.name}`}</Name>
