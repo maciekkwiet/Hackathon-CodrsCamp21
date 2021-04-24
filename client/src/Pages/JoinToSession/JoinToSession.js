@@ -16,31 +16,30 @@ const extra = (
 export const JoinToSessoin = () => {
   return (
     <Container>
-    <Header as='h2' color='#009C95' >
-    <Card.Header style={{fontSize:'40px', color:"#696969", fontStyle:"bolder"}}>AIO PRO TEAM</Card.Header>
-    </Header>
-        
+      <Header as="h2" color="#009C95">
+        <Card.Header style={{ fontSize: '40px', color: '#696969', fontStyle: 'bolder' }}>AIO PRO TEAM</Card.Header>
+      </Header>
+
       <Left>
-<Card style={{height:400 }}>
+        <Card style={{ height: 400 }}>
           <Image src={createRoom} />
-          
+
           <Tag>
-          <Card.Content style={{marginTop:'30px', fontSize:'20px'}}>
+            <Card.Content style={{ marginTop: '30px', fontSize: '20px' }}>
               <Card.Header>STWÓRZ NOWĄ SESJĘ</Card.Header>
             </Card.Content>
           </Tag>
- 
-       
-          <Buttons style={{ marginTop:'30px', width:300 }} >
+
+          <Buttons style={{ marginTop: '30px', width: 300 }}>
             <CreateNewRoom />
           </Buttons>
         </Card>
       </Left>
       <Right>
-      <Card style={{height:400 }}>
+        <Card style={{ height: 400 }}>
           <Image src={joinToRoom} />
           <Tag>
-          <Card.Content style={{marginTop:'30px',marginBottom:'35px', fontSize:'20px'}}>
+            <Card.Content style={{ marginTop: '30px', marginBottom: '35px', fontSize: '20px' }}>
               <Card.Header>PODAJ NUMER SESJI</Card.Header>
             </Card.Content>
           </Tag>

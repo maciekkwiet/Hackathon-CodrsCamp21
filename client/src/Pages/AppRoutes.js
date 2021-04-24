@@ -11,7 +11,7 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/daily">
+        <Route path="/board">
           <DailyPage />
         </Route>
         <Route path="/beer">
@@ -24,7 +24,7 @@ export const AppRoutes = () => {
           <AddName />
         </Route>
         <Route path="/room/:roomId">
-        <Menu />
+          <Menu />
         </Route>
         <Route path="/">
           <JoinToSessoin />

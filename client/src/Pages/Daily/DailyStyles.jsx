@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 100vh;
   flex-direction: column;
   justify-content: stretch;
-
 `;
 
 //,,Mini navbar" on top
@@ -14,8 +13,8 @@ export const Navi = styled.div`
   justify-content: flex-end;
   min-height: 50px;
 
-  background: #00A9FF;
-  padding:5px;
+  background: #00a9ff;
+  padding: 5px;
 `;
 
 //Online people
@@ -30,7 +29,7 @@ export const SideContainer = styled.div`
   width: 30%;
   transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 5;
-  background: #E0F2F1;
+  background: #e0f2f1;
   transition: all 0.7s ease;
 `;
 
@@ -67,26 +66,25 @@ export const Icons = styled.div`
 
 export const StyledButton = styled.button`
   padding: 0;
-  border-radius:8px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   border: none;
-  background: #FFFF;
-  margin:10px;
+  background: #ffff;
+  margin: 10px;
 
   &:hover,
   &:focus {
-    background: #E0F2F1;
-   
+    background: #e0f2f1;
   }
 `;
 
 export const StyledButton1 = styled.button`
   padding: 0;
-  border-radius:8px;
+  border-radius: 8px;
 
   display: flex;
   justify-content: center;
@@ -94,14 +92,11 @@ export const StyledButton1 = styled.button`
   width: 100%;
   height: 100%;
   border: none;
-  background: #A9E704;
-  margin:10;
-   
- 
+  background: #a9e704;
+  margin: 10;
 
   &:hover,
   &:focus {
-    background: #A9E704;
-   
+    background: #a9e704;
   }
 `;

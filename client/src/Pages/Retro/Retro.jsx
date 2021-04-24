@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
+import { MadSadGlad } from '../../Components/MadSadGlad/MadSadGlad';
 import { Container, Navi, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
 export const RetroPage = () => {
   const [show, setShow] = useState(false);
   const [peoples, setPeoples] = useState([{ name: '' }]);
   let history = useHistory();
-
-
 
   useEffect(() => {
     let users = JSON.parse(localStorage.getItem('users'));
@@ -17,9 +16,8 @@ export const RetroPage = () => {
   }, []);
 
   function handleReturn() {
-    
-  const roomId = localStorage.getItem("sessionId");
-     history.push(`/room/${roomId}`);
+    const roomId = localStorage.getItem('sessionId');
+    history.push(`/room/${roomId}`);
   }
 
   useEffect(() => {
@@ -50,6 +48,7 @@ export const RetroPage = () => {
           );
         })}
       </SideContainer>
+      <MadSadGlad />
     </Container>
   );
 };

@@ -5,6 +5,10 @@ import Timeline from 'react-calendar-timeline';
 import "react-calendar-timeline/lib/Timeline.css";
 
 import generateFakeData from './generate-fake-data';
+import background from '../../assets/background.png';
+
+
+
 
 var keys = {
   groupIdKey: 'id',
@@ -38,41 +42,43 @@ export default class App extends Component {
   itemRenderer = ({ item, timelineContext, itemContext, getItemProps, getResizeProps }) => {
     const { left: leftResizeProps, right: rightResizeProps } = getResizeProps();
     const backgroundColor = itemContext.selected ? (itemContext.dragging ? 'red' : item.selectedBgColor) : item.bgColor;
-    const borderColor = itemContext.resizing ? 'red' : item.color;
+    const borderColor = itemContext.resizing ? 'gray' : item.color;
     return (
+      <div style={{padding:'500px'}}> <div
+      {...getItemProps({
+        style: {
+          backgroundColor,
+          color: item.color,
+          borderColor,
+          borderStyle: 'solid',
+          borderWidth: 1,
+          borderRadius: 4,
+          borderLeftWidth: itemContext.selected ? 3 : 1,
+          borderRightWidth: itemContext.selected ? 3 : 1,
+        },
+        onMouseDown: () => {
+          console.log('on item click', item);
+        },
+      })}
+    >
+      {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : null}
+
       <div
-        {...getItemProps({
-          style: {
-            backgroundColor,
-            color: item.color,
-            borderColor,
-            borderStyle: 'solid',
-            borderWidth: 1,
-            borderRadius: 4,
-            borderLeftWidth: itemContext.selected ? 3 : 1,
-            borderRightWidth: itemContext.selected ? 3 : 1,
-          },
-          onMouseDown: () => {
-            console.log('on item click', item);
-          },
-        })}
+        style={{
+          height: itemContext.dimensions.height,
+          overflow: 'hidden',
+          paddingLeft: 3,
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+      
+        }}
       >
-        {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : null}
-
-        <div
-          style={{
-            height: itemContext.dimensions.height,
-            overflow: 'hidden',
-            paddingLeft: 3,
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {itemContext.title}
-        </div>
-
-        {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : null}
+        {itemContext.title}
       </div>
+
+      {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : null}
+    </div></div>
+     
     );
   };
 
@@ -117,22 +123,23 @@ export default class App extends Component {
     const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state;
 
     return (
-      <Timeline
-        groups={groups}
-        items={items}
-        keys={keys}
-        itemTouchSendsClick={false}
-        stackItems
-        itemHeightRatio={0.75}
-        showCursorLine
-        canMove={false}
-        canResize={false}
-        defaultTimeStart={defaultTimeStart}
-        defaultTimeEnd={defaultTimeEnd}
-        itemRenderer={this.itemRenderer}
-        onItemMove={this.handleItemMove}
-        onItemResize={this.handleItemResize}
-      />
+      <div style={{padding:'10px', backgroundColor:'#A9A9A9'}}>      <Timeline
+      groups={groups}
+      items={items}
+      keys={keys}
+      itemTouchSendsClick={false}
+      stackItems
+      itemHeightRatio={0.75}
+      showCursorLine
+      canMove={false}
+      canResize={false}
+      defaultTimeStart={defaultTimeStart}
+      defaultTimeEnd={defaultTimeEnd}
+      itemRenderer={this.itemRenderer}
+      onItemMove={this.handleItemMove}
+      onItemResize={this.handleItemResize}
+    /></div>
+
     );
   }
 }
