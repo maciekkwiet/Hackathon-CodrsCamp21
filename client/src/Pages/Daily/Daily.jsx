@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FaAngleLeft } from 'react-icons/fa';
+import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import { Bordzik } from '../../Components/Bordzik/Bordzik';
 import { Container, Navi, CallMe, Icons, StyledButton, SideContainer, Title, Person, Name } from '../Daily/DailyStyles';
 
@@ -9,18 +9,19 @@ export const DailyPage = () => {
   let history = useHistory();
 
   function handleReturn() {
-    history.push('/');
+    history.push('/menu');
   }
 
   return (
     <Container>
       <Navi>
-        <CallMe show={show}></CallMe>
         <Icons>
           <StyledButton onClick={handleReturn}>
-            <i>{FaAngleLeft}</i>Back
+            <FaAngleLeft size={'2rem'} />
           </StyledButton>
-          <StyledButton onClick={() => setShow(!show)}>Lista osob na daily</StyledButton>
+          <StyledButton onClick={() => setShow(!show)}>
+            <FaUserFriends size={'2rem'} />
+          </StyledButton>
         </Icons>
       </Navi>
       <SideContainer show={show}>

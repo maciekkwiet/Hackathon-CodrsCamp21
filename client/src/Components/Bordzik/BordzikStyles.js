@@ -3,9 +3,6 @@ import Board from 'react-trello';
 
 export const StyledBoard = styled(Board)`
   display: flex;
-  background: #5386e4;
-
-  .cardStyle {
-    color: yellow;
-  }
+  height: 100%;
+  background: #2b2d42;
 `;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: stretch;
 `;
@@ -9,19 +10,9 @@ export const Container = styled.div`
 //,,Mini navbar" on top
 export const Navi = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   min-height: 50px;
-  background: red;
-`;
-
-//Link to meeting
-export const CallMe = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 65%;
-  transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(-100%)')};
-  background: yellow;
+  background: #067bc2;
 `;
 
 //Online people
@@ -33,16 +24,20 @@ export const SideContainer = styled.div`
   top: 50px;
   right: 0;
   height: 100%;
-  width: 35%;
+  width: 30%;
   transform: ${({ show }) => (show ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 5;
-  background: yellow;
+  background: #f8f32b;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   margin: 0;
   padding: 25px 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  border-bottom: 5px solid #000;
+  border-bottom: 5px solid #000;
 `;
 
 export const Person = styled.div`
@@ -50,11 +45,11 @@ export const Person = styled.div`
   width: 70%;
   padding: 7px;
   font-size: 1.25rem;
-  border-bottom: 1px solid #1a1b25;
+  border-bottom: 2px solid #000;
 `;
 
 export const Name = styled.p`
-  color: black;
+  color: #000;
 `;
 
 //Styles for round icons
@@ -63,7 +58,7 @@ export const Icons = styled.div`
   justify-content: stretch;
   align-content: center;
   align-items: center;
-  width: 35%;
+  width: 30%;
 `;
 
 export const StyledButton = styled.button`
@@ -74,9 +69,12 @@ export const StyledButton = styled.button`
   width: 100%;
   height: 100%;
   border: none;
-  background: red;
+  border-bottom: 5px solid #ffffff;
+  background: #067bc2;
 
-  &:hover {
-    background: yellow;
+  &:hover,
+  &:focus {
+    background: #f8f32b;
+    border-bottom: 5px solid #000000;
   }
 `;

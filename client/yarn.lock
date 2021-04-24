@@ -2601,11 +2601,7 @@ axe-core@^4.0.2:
 
 axios@^0.21.1:
   version "0.21.1"
-<<<<<<< HEAD
-  resolved "https://registry.npmjs.org/axios/-/axios-0.21.1.tgz"
-=======
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz"
->>>>>>> 615327b2db9d27730c4e663c560a02ffac07387f
   integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
     follow-redirects "^1.10.0"
@@ -5249,19 +5245,16 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0, follow-redirects@^1.10.0:
+follow-redirects@^1.0.0:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.2.tgz"
   integrity sha512-6mPTgLxYm3r6Bkkg0vNM0HTjfGrOEtsfbhagQvbxDEsEkpNhw582upBaoRZylzen6krEmxXJgt9Ju6HiI4O7BA==
 
-<<<<<<< HEAD
-=======
 follow-redirects@^1.10.0:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz"
   integrity sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
 
->>>>>>> 615327b2db9d27730c4e663c560a02ffac07387f
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz"
@@ -9440,11 +9433,7 @@ react-refresh@^0.8.3:
 
 react-router-dom@^5.2.0:
   version "5.2.0"
-<<<<<<< HEAD
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.2.0.tgz"
-=======
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.2.0.tgz"
->>>>>>> 615327b2db9d27730c4e663c560a02ffac07387f
   integrity sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==
   dependencies:
     "@babel/runtime" "^7.1.2"
