@@ -13,7 +13,7 @@ export const CreateNewRoom = () => {
     setIsException(false);
     setIsLoading(true);
     try {
-      const currentRoom = await axios.post('http://aio-pro-team.herokuapp.com/api/session');
+      const currentRoom = await axios.post('https://aio-pro-team.herokuapp.com/api/session');
       setIsLoading(false);
       localStorage.setItem('sessionId', currentRoom.data.id);
       history.push(`/room/${currentRoom.data.id}/join`, { isAdmin: true });

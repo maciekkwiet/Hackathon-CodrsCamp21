@@ -20,7 +20,7 @@ export const Bordzik = () => {
 
   useEffect(() => {
     const interval = setInterval(async () => {
-      const { data } = await axios.get('http://aio-pro-team.herokuapp.com/api/taskTable/', {
+      const { data } = await axios.get('https://aio-pro-team.herokuapp.com/api/taskTable/', {
         params: { roomId: sessionId },
       });
       console.log(data.data);
@@ -30,7 +30,7 @@ export const Bordzik = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios.post('http://aio-pro-team.herokuapp.com/api/taskTable/', {
+      await axios.post('https://aio-pro-team.herokuapp.com/api/taskTable/', {
         params: {
           roomId: sessionId,
           data: data,
