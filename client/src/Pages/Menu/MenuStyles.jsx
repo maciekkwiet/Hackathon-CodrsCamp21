@@ -4,6 +4,7 @@ import dayli from '../../assets/dayli.jpg';
 import background from '../../assets/background.png';
 import beer from '../../assets/beer.jpg';
 import retro from '../../assets/retro.jpg';
+import contact from '../../assets/contact.jpg';
 
 export const Full = styled.div`
   justify-content: center;
@@ -50,7 +51,7 @@ export const Container = styled.div`
 
   ${Box}:hover & {
     padding-top: 2rem;
-    background: #f8f32b;
+    background-image: url(${contact});
     height: 100%;
     width: 100%;
     transition: all 0.2s ease;
