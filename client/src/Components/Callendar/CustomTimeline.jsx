@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 import Timeline from 'react-calendar-timeline';
+import "react-calendar-timeline/lib/Timeline.css";
 
 import generateFakeData from './generate-fake-data';
 

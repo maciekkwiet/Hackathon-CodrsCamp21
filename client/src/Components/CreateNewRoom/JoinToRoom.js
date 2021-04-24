@@ -17,11 +17,14 @@ export const JoinToRoom = () => {
         <Lab>
           <Input
             focus
+            minLength={4}
+            maxLength={4}
             placeholder="Dołącz..."
             value={roomId}
             onChange={e => {
               setRoomId(e.target.value);
             }}
+            required={true}
           />
           <Button color="teal" content={'JOIN SESSION'}>
             DOŁĄCZ
