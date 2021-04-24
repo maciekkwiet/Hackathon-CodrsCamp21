@@ -1,9 +1,24 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'socketio-hooks';
+import Carousel from 'react-elastic-carousel';
+import './Contact.css';
+import { Card } from 'semantic-ui-react';
 import { FaAngleLeft, FaUserFriends } from 'react-icons/fa';
 import { Container, Navi, Icons, StyledButton, StyledButton1 } from '../Daily/DailyStyles';
-import { AvatarCard } from '../../Components/AvatarCard/AvatarCard';
+import { AvatarCard } from '../../Components/AvatarCard';
+
+const jokes = [
+  { pytanie: 'Jaka jest ulubiona zemsta cukiernika?', odpowiedz: ' Słodka' },
+  { pytanie: 'Co robi sprzątaczka na scenie?', odpowiedz: ' Wymiata' },
+  { pytanie: 'Co mówi ksiądz na ślubie informatyka?', odpowiedz: ' Pobieranie zakończone.' },
+  { pytanie: 'Dlaczego beton nie ma pracy?', odpowiedz: ' Bo napadał.' },
+  { pytanie: 'Dlaczego deszcz siedzi w więzieniu?', odpowiedz: ' Słodka' },
+  { pytanie: 'Co mówi drwal, gdy za dużo wypije?', odpowiedz: ' Ale się narąbałem.' },
+  { pytanie: 'Jaka jest ulubiona dyscyplina sportu informatyka?', odpowiedz: ' Rzut dyskiem' },
+  { pytanie: 'Jak piją wódkę konduktorzy?', odpowiedz: ' Składają się na taksówkę.' },
+  { pytanie: 'Co robią Transformersi wychodząc z imprezy?', odpowiedz: ' Słodka' },
+];
 
 export const ContactPage = () => {
   const [show, setShow] = useState(false);
@@ -36,6 +51,18 @@ export const ContactPage = () => {
         </Icons>
       </Navi>
       <AvatarCard></AvatarCard>
+      <div>
+        <div styles={{ marigin: 50 }}>
+          {' '}
+          <Carousel itemsToShow={1} className="styling-example" style={{ marginTop: 50, position: 'absolute' }}>
+            {jokes.map(item => (
+              <div>
+                <h3>{item.pytanie}</h3> <h4>{item.odpowiedz}</h4>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </div>
     </Container>
   );
 };
